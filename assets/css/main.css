@@ -509,6 +509,10 @@ footer.sticky-bottom {
 .hikes a:hover .card-title {
   color: var(--global-theme-color);
 }
+.hikes .card {
+  height: 12em;
+  text-transform: lowercase;
+}
 .hikes .card img {
   width: 100%;
 }
