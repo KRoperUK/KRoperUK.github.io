@@ -1,11 +1,10 @@
     {% if site.footer_fixed %}
     <footer class="fixed-bottom">
-      <div style="text-align: center;" class="container mt-0">
+      <div class="container mt-0">
         &copy; Copyright {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}. {{ site.footer_text }}
         {%- if site.impressum_path -%}
         <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
         {%- endif -%}
-        <br />
         {%- if site.last_updated -%}
         Last updated: {{ "now" | date: '%B %d, %Y' }}.
         {%- endif %}
