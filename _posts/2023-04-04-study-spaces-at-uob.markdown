@@ -7,9 +7,6 @@ description: # Generated post
 categories: general
 
 ---
-
-# Study spaces at UoB
-
 ## On Campus
 
 The University of Birmingham is home to many brilliant study spaces.
