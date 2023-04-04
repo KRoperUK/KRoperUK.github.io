@@ -35,6 +35,10 @@ layout: default
           </center>
         </div>
 
+<script>
+  document.getElementById('nav-hikes').classList.add('active');
+</script>
+
 {% if page.mapping %}
   <script>
     var settings = {{ page.mapping | jsonify }};

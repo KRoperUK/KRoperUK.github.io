@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: Voting App
 description: A voting app to assist committees and societies with elections.
 img: 
