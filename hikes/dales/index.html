@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>hikes | Kieran  Roper</title>
+    <title>Yorkshire Dales | Kieran  Roper</title>
     <meta name="author" content="Kieran  Roper">
-    <meta name="description" content="all the different hikes I have been on">
+    <meta name="description" content="Even better than Yorkshire Tea">
 
 
     <!-- Bootstrap & MDB -->
@@ -32,7 +32,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%91%A8%F0%9F%8F%BC%E2%80%8D%F0%9F%92%BB&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://kroperuk.github.io/hikes/">
+    <link rel="canonical" href="https://kroperuk.github.io/hikes/dales/">
     
     <!-- Dark Mode -->
     
@@ -76,8 +76,8 @@
               </li>
 
               <!-- Other pages -->
-              <li id="nav-hikes" class="nav-item active">
-                <a class="nav-link" href="/hikes/">hikes<span class="sr-only">(current)</span></a>
+              <li id="nav-hikes" class="nav-item ">
+                <a class="nav-link" href="/hikes/">hikes</a>
               </li>
               <li id="nav-projects" class="nav-item ">
                 <a class="nav-link" href="/projects/">projects</a>
@@ -112,100 +112,56 @@
 
     <!-- Content -->
     <div class="container mt-5">
-      <!-- page.html -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+<!-- page.html -->
         <div class="post">
-
           <header class="post-header">
-            <h1 class="post-title">hikes</h1>
-            <p class="post-description">all the different hikes I have been on</p>
+            <div class="card">
+              
+              <div class="card-header">
+                <h1 class="post-title">Yorkshire Dales</h1>
+              </div>
+              
+              <div class="card-body">
+                <p class="post-description">Even better than Yorkshire Tea</p>
+              </div>
+              
+              
+              <div id="map" style="height: 24em;"></div>
+              
+            </div>
           </header>
-
+          
           <article>
-            <!-- pages/hikes.md -->
-<div class="hikes">
-<!-- Display hikes without categories --><!-- Generate cards for each hikes -->
-  <div class="grid">
-<!-- _includes/hikes.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/hikes/brecon/">
-      <div class="card hoverable">
-        <div class="card-body">
-          <h2 class="card-title">Brecon Beacons</h2>
-          <p class="card-text">A beautiful range in South Wales</p>
-          <div class="row ml-1 mr-1 p-0">
-            <!-- TODO: Add more stuff about the hike post -->
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/hikes.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/hikes/church-stretton/">
-      <div class="card hoverable">
-        <div class="card-body">
-          <h2 class="card-title">Church Stretton</h2>
-          <p class="card-text">A hike in Shropshire.</p>
-          <div class="row ml-1 mr-1 p-0">
-            <!-- TODO: Add more stuff about the hike post -->
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/hikes.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/hikes/dales/">
-      <div class="card hoverable">
-        <div class="card-body">
-          <h2 class="card-title">Yorkshire Dales</h2>
-          <p class="card-text">Even better than Yorkshire Tea</p>
-          <div class="row ml-1 mr-1 p-0">
-            <!-- TODO: Add more stuff about the hike post -->
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/hikes.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/hikes/malvern/">
-      <div class="card hoverable">
-        <div class="card-body">
-          <h2 class="card-title">Malvern Hills</h2>
-          <p class="card-text">Worcestershire's finest</p>
-          <div class="row ml-1 mr-1 p-0">
-            <!-- TODO: Add more stuff about the hike post -->
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/hikes.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/hikes/wrekin/">
-      <div class="card hoverable">
-        <div class="card-body">
-          <h2 class="card-title">The Wrekin</h2>
-          <p class="card-text">Another hike in Shropshire.</p>
-          <div class="row ml-1 mr-1 p-0">
-            <!-- TODO: Add more stuff about the hike post -->
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-  </div>
-</div>
+            
 
           </article>
+          
+          <br>
 
+          <center>
+            <a href="/hikes/"><button class="btn btn-success">Back to hikes</button></a>
+          </center>
         </div>
+
+<script>
+  document.getElementById('nav-hikes').classList.add('active');
+</script>
+
+
+  <script>
+    var settings = {"latitude":54.227656804043335,"longitude":-2.5185363382566277};
+    var map = L.map('map').setView([settings.latitude,settings.longitude], 13);
+    L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    var marker = L.marker([settings.latitude,settings.longitude]).addTo(map);
+    marker.bindPopup("<b>Yorkshire Dales</b>")
+  </script>
+
 
     </div>
 
