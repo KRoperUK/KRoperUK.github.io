@@ -1,0 +1,24 @@
+<!-- _includes/hikes.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  {% if hike.redirect -%}
+  <a href="{{ hike.redirect }}">
+    {%- else -%}
+    <a href="{{ hike.url | relative_url }}">
+      {%- endif %}
+      <div class="card hoverable">
+        {%- if hike.img %}
+        {%- include figure.html
+          path=hike.img
+          alt="hike thumbnail" -%}
+        {%- endif %}
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">{{ hike.title }}</h2>
+          <p class="card-text">{{ hike.description }}</p>
+          <div class="row ml-1 mr-1 p-0">
+            <!-- TODO: Add more stuff about the hike post -->
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
