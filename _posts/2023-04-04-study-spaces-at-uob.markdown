@@ -22,7 +22,7 @@ Here are some of my favourites:
 
 ## Outside of campus
 
-Outside of campus I love the following:
+Outside of campus I love working in the following:
 
 - HeyBrew
 - Winterbourne

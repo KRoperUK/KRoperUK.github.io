@@ -56,7 +56,7 @@ class Jekyll < Thor
         post.puts ""
         post.puts "---"
         post.puts ""
-        post.puts "\"#{title.gsub(/&/,'&amp;')}\""
+        post.puts "#{title.gsub(/&/,'&amp;')}"
         post.puts "<!-- Generated announcement -->"
       end
   
