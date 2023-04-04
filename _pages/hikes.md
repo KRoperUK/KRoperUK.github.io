@@ -3,7 +3,7 @@ layout: page
 title: hikes
 permalink: /hikes/
 nav: true
-description: All the different hikes I have been on.
+description: all the different hikes I have been on
 display_categories: [trip]
 horizontal: false
 ---
