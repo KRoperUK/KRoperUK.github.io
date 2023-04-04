@@ -1,29 +1,49 @@
 ---
 layout: default
 ---
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
 <!-- page.html -->
         <div class="post">
+          <header class="post-header">
+            <div class="card">
+              
+              <div class="card-header">
+                <h1 class="post-title">{{ page.title }}</h1>
+              </div>
+              
+              <div class="card-body">
+                <p class="post-description">{{ page.description }}</p>
+              </div>
+              
+              {% if page.mapping %}
+              <div id="map" style="height: 24em;"></div>
+              {% endif %}
+            </div>
+          </header>
+          
+          <article>
+            {{ content }}
+          </article>
+          
+          <br />
 
           <center>
             <a href="/hikes/"><button class="btn btn-success">Back to hikes</button></a>
           </center>
-          <br />
-
-          <header class="post-header">
-            <div class="card">
-                
-              <div class="card-header">
-                <h1 class="post-title">{{ page.title }}</h1>
-              </div>
-
-              <div class="card-body">
-                <p class="post-description">{{ page.description }}</p>
-              </div>
-            </div>
-          </header>
-
-          <article>
-            {{ content }}
-          </article>
-
         </div>
+
+{% if page.mapping %}
+  <script>
+    var settings = {{ page.mapping | jsonify }};
+    var map = L.map('map').setView([settings.latitude,settings.longitude], 13);
+    L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    var marker = L.marker([settings.latitude,settings.longitude]).addTo(map);
+    marker.bindPopup("<b>{{ page.title }}</b>")
+  </script>
+{% endif %}

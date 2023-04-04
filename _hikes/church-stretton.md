@@ -5,8 +5,8 @@ description: A hike in Shropshire.
 img: 
 importance: 1
 category: trip
-location:
-  latitude: 51.5285582
-  longitude: -0.2416807
+mapping:
+  latitude: 52.54498248701521
+  longitude: -2.8029639338638574
   title: custom market title
 ---

@@ -10,7 +10,7 @@ middle_name:
 last_name: Roper
 email: kar020@student.bham.ac.uk
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Computer Science student at the University of Birmingham
+  2nd Year Computer Science student at the University of Birmingham
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -226,7 +226,6 @@ plugins:
   - jekyll-twitter-plugin
   - jemoji
   - jekyll-youtube
-  - jekyll-maps
 
 # Sitemap settings
 defaults:

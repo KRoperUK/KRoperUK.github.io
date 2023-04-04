@@ -9,21 +9,15 @@
 - title: Education
   type: time_table
   contents:
-    - title: BSc
+    - title: BSc Computer Science with Industrial Year
       institution: University of Birmingham
       year: 2021-2025
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: A levels and GCSEs
-      institution: Ormiston SWB Academy
+        - 2:1, 1st Year
+    - title: Ormiston SWB Academy
       year: 2014-2021
       description:
-        - "A level: A*AB - Computer Science, Mathematics, Law. A EPQ."
+        - "A-levels: A*AB - Computer Science, Mathematics, Law. A EPQ."
         - "GCSEs: 3 9s, 2 8s, 7, 6. BTECs: 3 Distinctions"
 
 - title: Experience

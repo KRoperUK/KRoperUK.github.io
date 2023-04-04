@@ -14,7 +14,6 @@ group :jekyll_plugins do
     gem 'jekyll-sitemap'
     gem 'jekyll-twitter-plugin'
     gem 'jekyll-youtube'
-    gem 'jekyll-maps'
     gem 'jemoji'
     gem 'mini_racer'
     gem 'unicode_utils'

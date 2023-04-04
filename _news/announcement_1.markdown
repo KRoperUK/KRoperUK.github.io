@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Website created."
+title: "Created"
 inline: true
 related_posts: false
 date: 2023-04-04
@@ -8,5 +8,5 @@ tags:
 
 ---
 
-Website created.
+Created site.
 <!-- Generated announcement -->
