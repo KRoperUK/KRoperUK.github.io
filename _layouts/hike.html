@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<!-- page.html -->
+        <div class="post">
+
+          <center>
+            <a href="/hikes/"><button class="btn btn-success">Back to hikes</button></a>
+          </center>
+          <br />
+
+          <header class="post-header">
+            <div class="card">
+                
+              <div class="card-header">
+                <h1 class="post-title">{{ page.title }}</h1>
+              </div>
+
+              <div class="card-body">
+                <p class="post-description">{{ page.description }}</p>
+              </div>
+            </div>
+          </header>
+
+          <article>
+            {{ content }}
+          </article>
+
+        </div>

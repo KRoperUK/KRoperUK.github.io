@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: hike
 title: Church Stretton
-description: 
+description: A hike in Shropshire.
 img: 
 importance: 1
 category: trip
