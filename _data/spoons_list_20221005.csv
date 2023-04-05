@@ -41,7 +41,7 @@ The Calverts Court,53.410333,-2.157645,13 St Petersgate,Stockport,Cheshire,SK1 1
 The Counting House,53.163783,-2.214671,18 Swan Bank,Congleton,Cheshire,CW12 1AH,01260 272654,https://www.jdwetherspoon.com/pubs/all-pubs/england/cheshire/the-counting-house-congleton,N
 The Ferry Boat,53.342150,-2.731586,10 Church Street,Runcorn,Cheshire,WA7 1LR,01928 583380,https://www.jdwetherspoon.com/pubs/all-pubs/england/cheshire/the-ferry-boat-runcorn,N
 The Friar Penketh,53.387163,-2.593436,4 Barbauld Street,Warrington,Cheshire,WA1 1EX,01925 237320,https://www.jdwetherspoon.com/pubs/all-pubs/england/cheshire/the-friar-penketh-warrington,N
-The George Inn,53.143343,-2.362178,39 High Street,Sandbach,Cheshire East,CW11 1AL,01270 758180,https://www.jdwetherspoon.com/pubs/all-pubs/england/cheshire/the-george-inn-sandbach,N
+The George Inn,53.143343,-2.362178,39 High Street,Sandbach,Cheshire East,CW11 1AL,01270 758180,https://www.jdwetherspoon.com/pubs/all-pubs/england/cheshire/the-george-inn-sandbach,Y
 The Kingfisher,53.346484,-2.124031,London Road South,Poynton,Cheshire,SK12 1NJ,01625 870990,https://www.jdwetherspoon.com/pubs/all-pubs/england/cheshire/the-kingfisher-poynton,N
 The Penny Black,53.262202,-2.508536,110 Witton Street,Northwich,Cheshire,CW9 5AB,01606 42029,https://www.jdwetherspoon.com/pubs/all-pubs/england/cheshire/the-penny-black-northwich,N
 The Premier,53.370400,-2.724383,93–99 Albert Road,Widnes,Cheshire,WA8 6JS,0151 422 4920,https://www.jdwetherspoon.com/pubs/all-pubs/england/cheshire/the-premier-widnes,N
@@ -527,10 +527,10 @@ The Swan & Castle,51.751100,-1.261570,Castle Street,Oxford,Oxfordshire,OX1 1AY,0
 The William Morris,51.732347,-1.217602,59a Between Towns Road,Oxford,Oxfordshire,OX4 3LR,01865 335950,https://www.jdwetherspoon.com/pubs/all-pubs/england/oxfordshire/the-william-morris-oxford,N
 The Captain Noel Newton,52.670094,-0.731175,55 High Street,Oakham,Rutland,LE15 6AJ,01572 725490,https://www.jdwetherspoon.com/pubs/all-pubs/england/rutland/the-captain-noel-newton-oakham,N
 Jewel of the Severn,52.536721,-2.420223,80–81 High Street,Bridgnorth,Shropshire,WV16 4DS,01746 711980,https://www.jdwetherspoon.com/pubs/all-pubs/england/shropshire/jewel-of-the-severn-bridgnorth,N
-Montgomery’s Tower,52.709256,-2.758646,Lower Claremont Bank,Shrewsbury,Shropshire,SY1 1RT,01743 239080,https://www.jdwetherspoon.com/pubs/all-pubs/england/shropshire/montgomerys-tower-shrewsbury,N
+Montgomery’s Tower,52.709256,-2.758646,Lower Claremont Bank,Shrewsbury,Shropshire,SY1 1RT,01743 239080,https://www.jdwetherspoon.com/pubs/all-pubs/england/shropshire/montgomerys-tower-shrewsbury,Y
 The Hippodrome,52.906125,-2.485833,Queen Street,Market Drayton,Shropshire,TF9 1PS,01630 650820,https://www.jdwetherspoon.com/pubs/all-pubs/england/shropshire/the-hippodrome-market-drayton,N
-The Shrewsbury Hotel,52.709482,-2.757119,Bridge Place,Shrewsbury,Shropshire,SY1 1PU,01743 236203,https://www.jdwetherspoon.com/pubs/all-pubs/england/shropshire/the-shrewsbury-hotel-shrewsbury,N
-The Thomas Botfield,52.675617,-2.445659,Central Square,Telford,Shropshire,TF3 4BW,01952 292672,https://www.jdwetherspoon.com/pubs/all-pubs/england/shropshire/the-thomas-botfield-telford,N
+The Shrewsbury Hotel,52.709482,-2.757119,Bridge Place,Shrewsbury,Shropshire,SY1 1PU,01743 236203,https://www.jdwetherspoon.com/pubs/all-pubs/england/shropshire/the-shrewsbury-hotel-shrewsbury,Y
+The Thomas Botfield,52.675617,-2.445659,Central Square,Telford,Shropshire,TF3 4BW,01952 292672,https://www.jdwetherspoon.com/pubs/all-pubs/england/shropshire/the-thomas-botfield-telford,Y
 The Wilfred Owen,52.859546,-3.056445,17 Willow Street,Oswestry,Shropshire,SY11 1AJ,01691 684910,https://www.jdwetherspoon.com/pubs/all-pubs/england/shropshire/the-wilfred-owen-oswestry,N
 The William Withering,52.700595,-2.517038,43–45 New Street,Wellington,Shropshire,TF1 1LU,01952 642800,https://www.jdwetherspoon.com/pubs/all-pubs/england/shropshire/the-william-withering-wellington,N
 Cabot Court Hotel,51.350518,-2.982553,Knightstone Road,Weston-super-Mare,Somerset,BS23 2AH,01934 427930,https://www.jdwetherspoon.com/pubs/all-pubs/england/somerset/cabot-court-hotel-westonsupermare,N
@@ -623,7 +623,7 @@ The Benjamin Satchwell,52.289716,-1.535581,112–114 The Parade,Royal Leamington
 The Felix Holt,52.523007,-1.469525,3 Stratford Street,Nuneaton,Warwickshire,CV11 5BS,024 7634 7785,https://www.jdwetherspoon.com/pubs/all-pubs/england/warwickshire/the-felix-holt-nuneaton,N
 The Golden Bee,52.191596,-1.705680,41–42 Sheep Street,Stratford-upon-Avon,Warwickshire,CV37 6EE,01789 203860,https://www.jdwetherspoon.com/pubs/all-pubs/england/warwickshire/the-golden-bee-stratforduponavon,N
 The Thomas Lloyd,52.282280,-1.590252,3–7 Market Place,Warwick,Warwickshire,CV34 4SA,01926 475690,https://www.jdwetherspoon.com/pubs/all-pubs/england/warwickshire/the-thomas-lloyd-warwick,N
-Abraham Darby,52.479426,-2.111407,Merry Hill Centre,Brierley Hill,West Midlands,DY5 1SX,01384 472850,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-midlands/abraham-darby-brierley-hill,N
+Abraham Darby,52.479426,-2.111407,Merry Hill Centre,Brierley Hill,West Midlands,DY5 1SX,01384 472850,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-midlands/abraham-darby-brierley-hill,Y
 St. Matthew’s Hall,52.585188,-1.979812,Lichfield Street,Walsall,West Midlands,WS1 1SX,01922 700820,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-midlands/st-matthews-hall-walsall,N
 The Arthur Robertson,52.516921,-1.902602,Walsall Road,Birmingham,West Midlands,B42 1AA,0121 332 5910,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-midlands/the-arthur-robertson-birmingham,N
 The Atrium,52.454597,-1.717906,Birmingham NEC,Birmingham,West Midlands,B40 1NT,0121 782 7757,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-midlands/the-atrium-birmingham,N
@@ -826,7 +826,7 @@ The Sussex,53.321051,-3.491623,20–26 Sussex Street,Rhyl,Denbighshire,LL18 1SG,
 The Central Hotel,53.212225,-3.039094,2–4 Chester Road West,Shotton,Flintshire,CH5 1BX,01244 845510,https://www.jdwetherspoon.com/pubs/all-pubs/wales/flintshire/the-central-hotel-shotton,N
 The Gold Cape,53.166431,-3.141215,8–8a Wrexham Street,Mold,Flintshire,CH7 1ES,01352 705920,https://www.jdwetherspoon.com/pubs/all-pubs/wales/flintshire/the-gold-cape-mold,N
 The Market Cross,53.274202,-3.222796,9–11 High Street,Holywell,Flintshire,CH8 7LA,01352 717800,https://www.jdwetherspoon.com/pubs/all-pubs/wales/flintshire/the-market-cross-holywell,N
-Pen Cob,52.887857,-4.417534,Station Square,Pwllheli,Gwynedd,LL53 5HG,01758 704970,https://www.jdwetherspoon.com/pubs/all-pubs/wales/gwynedd/pen-cob-pwllheli,N
+Pen Cob,52.887857,-4.417534,Station Square,Pwllheli,Gwynedd,LL53 5HG,01758 704970,https://www.jdwetherspoon.com/pubs/all-pubs/wales/gwynedd/pen-cob-pwllheli,Y
 Tafarn Y Porth,53.140706,-4.274801,5–9 Eastgate Street,Caernarfon,Gwynedd,LL55 1AG,01286 662920,https://www.jdwetherspoon.com/pubs/all-pubs/wales/gwynedd/tafarn-y-porth-caernarfon,N
 The Black Bull Inn,53.224370,-4.129060,107 High Street,Bangor,Gwynedd,LL57 1NS,01248 387900,https://www.jdwetherspoon.com/pubs/all-pubs/wales/gwynedd/the-black-bull-inn-bangor,N
 Y Dic Penderyn,51.747381,-3.378139,102–103 High Street,Merthyr Tydfil,Merthyr Tydfil,CF47 8AP,01685 385786,https://www.jdwetherspoon.com/pubs/all-pubs/wales/merthyr-tydfil/y-dic-penderyn-merthyr-tydfil,N
