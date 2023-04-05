@@ -10,8 +10,12 @@ nav: false
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 
 
-<div id="map" class="mb-5" style="height: 30em; border-radius: 5px;"></div>
+<div id="map" class="mb-3" style="height: 30em; border-radius: 5px;"></div>
 
+<div class="progress mb-1">
+  <div class="progress-bar" id="pubProgressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+  <p class="text-center mb-3"><span id="progressLeft"></span> / <span id="progressRight"></span></p>
 
 {% assign pubs = site.data.spoons_list_20221005 | sort: 'Locality' %}
 <div class="card-columns">
@@ -54,14 +58,25 @@ nav: false
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
+    var count = 0;
+
 
     for (i in pubPoints) {
         let pub = pubPoints[i];
         if (pub.Visited == "Y") {
             let marker = L.marker([pub.Latitude,pub.Longitude,], {icon: spoonsIcon}).addTo(map);
             marker.bindPopup(pub.pubName);
+            count += 1;
         }
     }
-    console.log(markers);
+    
+    document.getElementById("progressLeft").innerHTML = count;
+    document.getElementById("progressRight").innerHTML = pubPoints.length;
+
+
+    document.getElementById("pubProgressbar").ariaValueMax = pubPoints.length;
+    document.getElementById("pubProgressbar").ariaValueNow = count;
+
+    document.getElementById("pubProgressbar").style.width = (count / pubPoints.length * 100) + "%";
 
 </script>
