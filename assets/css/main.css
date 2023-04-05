@@ -807,6 +807,12 @@ pre:active .copy, pre:focus .copy, pre:hover .copy {
   opacity: 1;
 }
 
+@media (prefers-color-scheme: dark) {
+  .leaflet-popup-content {
+    color: black;
+    font-weight: 800;
+  }
+}
 /*******************************************************************************
  * Style overrides for distill blog posts.
  ******************************************************************************/
