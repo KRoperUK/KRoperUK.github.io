@@ -901,3 +901,11 @@ pre {
     opacity: 1;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .leaflet-popup-content {
+    color: black;
+    font-weight: 800;
+  }
+}
+
