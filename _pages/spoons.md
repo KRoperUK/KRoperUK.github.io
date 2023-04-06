@@ -6,8 +6,7 @@ description: all the spoons I've visited
 nav: false
 ---
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+{% include leaflet-header.html %}
 
 
 <div id="map" class="mb-3" style="height: 30em; border-radius: 5px;"></div>
@@ -53,6 +52,7 @@ nav: false
     var pubPoints = {{ site.data.spoons_list_20221005 | jsonify }};
     // console.log(pubPoints);
     var map = L.map('map').setView([53.19059056109805, -1.864886360220277], 8);
+
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
