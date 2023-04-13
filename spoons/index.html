@@ -123,13 +123,19 @@
           <article>
             <!-- _includes/leaflet-header.html -->
 
+<!-- Leaflet base JS & CSS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css">
-
-<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css">
 
 <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
 
-<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+<!-- Not Currently used: -->
+<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" /> -->
+<!-- <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script> -->
+
+<!-- Locate control, used for current location. -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
 
 <div id="map" class="mb-3" style="height: 30em; border-radius: 5px;"></div>
 
@@ -2960,6 +2966,9 @@
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
+    var lc = L.control.locate({keepCurrentZoomLevel:true,}).addTo(map);
+    lc.start();
+
     var count = 0;
 
 
@@ -2994,7 +3003,7 @@
     <footer class="fixed-bottom">
       <div style="text-align: center;" class="container mt-0">
         © Copyright 2023 Kieran  Roper. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
-<br>Last updated: April 12, 2023.
+<br>Last updated: April 13, 2023.
       </div>
     </footer>
 
