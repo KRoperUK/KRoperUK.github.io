@@ -2,8 +2,8 @@
 layout: page
 title: spoons
 permalink: /spoons/
-description: all the spoons I've visited
-nav: false
+description: "all the spoons I've visited. this page uses leafletJS and plugins thereof (locatecontrol, markercluster); and has been created to assist in my learning of leafletJS."
+nav: true
 ---
 
 {% include leaflet-header.html %}
@@ -61,7 +61,12 @@ nav: false
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
-    var lc = L.control.locate({keepCurrentZoomLevel:true,}).addTo(map);
+    function handleLocationError() {
+        console.log("Location refused");
+    }
+
+    var lc = L.control.locate({keepCurrentZoomLevel:true,onLocationError: handleLocationError,}).addTo(map);
+
     lc.start();
 
     var markers = L.markerClusterGroup();

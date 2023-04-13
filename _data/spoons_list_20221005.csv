@@ -1,5 +1,5 @@
 pubName,Latitude,Longitude,Street,Locality,Region,Postcode,Telephone,Source URL,Visited
-The Angel,51.5322175, -0.1065742,3–5 Islington High Street,Islington,London,N1 9LQ,020 78372218,https://www.jdwetherspoon.com/pubs/all-pubs/england/london/the-angel-islington,Y
+The Angel,51.5322175," -0.1065742",3–5 Islington High Street,Islington,London,N1 9LQ,020 78372218,https://www.jdwetherspoon.com/pubs/all-pubs/england/london/the-angel-islington,Y
 The Crown Hotel,52.0869051,-0.264905,23 High Street,Biggleswade,Bedfordshire,SG18 0JE,01767 310510,https://www.jdwetherspoon.com/pubs/all-pubs/england/bedfordshire/the-crown-hotel,N
 The Gary Cooper,51.889702,-0.521186,"Unit 2, Grove Park",Dunstable,Bedfordshire,LU5 4GP,01582 471452,https://www.jdwetherspoon.com/pubs/all-pubs/england/bedfordshire/the-gary-cooper-dunstable,N
 The Pilgrim’s Progress,52.136021,-0.471718,42 Midland Road,Bedford,Bedfordshire,MK40 1QB,01234 363751,https://www.jdwetherspoon.com/pubs/all-pubs/england/bedfordshire/the-pilgrims-progress-bedford,N
@@ -95,7 +95,7 @@ The Portland Hotel,53.235196,-1.431165,West Bars,Chesterfield,Derbyshire,S40 1AY
 The Red Lion,53.050784,-1.407357,Market Place,Ripley,Derbyshire,DE5 3BR,01773 512875,https://www.jdwetherspoon.com/pubs/all-pubs/england/derbyshire/the-red-lion-ripley,N
 The Sir Nigel Gresley,52.774308,-1.557805,Market Street,Swadlincote,Derbyshire,DE11 0AD,01283 227560,https://www.jdwetherspoon.com/pubs/all-pubs/england/derbyshire/the-sir-nigel-gresley-swadlincote,N
 The Smithy Fold,53.442653,-1.948946,"Unit 11, Howard Town Shopping Park",Glossop,Derbyshire,SK13 8HS,01457 890070,https://www.jdwetherspoon.com/pubs/all-pubs/england/derbyshire/the-smithy-fold-glossop,N
-The Standing Order ,52.924163,-1.478165,28–32 Iron Gate,Derby,Derbyshire,DE1 3GL,01332 207591,https://www.jdwetherspoon.com/pubs/all-pubs/england/derbyshire/the-standing-order-derby,N
+"The Standing Order ",52.924163,-1.478165,28–32 Iron Gate,Derby,Derbyshire,DE1 3GL,01332 207591,https://www.jdwetherspoon.com/pubs/all-pubs/england/derbyshire/the-standing-order-derby,N
 The Thomas Leaper,52.924163,-1.478165,27 Iron Gate,Derby,Derbyshire,DE1 3GL,01332 867850,https://www.jdwetherspoon.com/pubs/all-pubs/england/derbyshire/the-thomas-leaper-derby,N
 The Wye Bridge House,53.259412,-1.905302,Fairfield Road,Buxton,Derbyshire,SK17 7DJ,01298 70932,https://www.jdwetherspoon.com/pubs/all-pubs/england/derbyshire/the-wye-bridge-house-buxton,N
 Waggon and Horses,53.097116,-1.390282,9 King Street,Alfreton,Derbyshire,DE55 7AF,01773 545890,https://www.jdwetherspoon.com/pubs/all-pubs/england/derbyshire/waggon-and-horses-alfreton,N
@@ -146,7 +146,7 @@ The Picture Playhouse,50.8402323,0.4709064,The Picture Playhouse,Bexhill-on-Sea,
 The Post & Telegraph,50.822988,-0.140446,155–158 North Street,Brighton,East Sussex,BN1 1EA,01273 827540,https://www.jdwetherspoon.com/pubs/all-pubs/england/east-sussex/the-post--telegraph-brighton,N
 The West Quay,50.812150,-0.105217,Brighton Marina Village,Brighton,East Sussex,BN2 5UT,01273 645780,https://www.jdwetherspoon.com/pubs/all-pubs/england/east-sussex/the-west-quay-brighton,N
 City and County,53.703530,-0.871177,Market Square,Goole,East Yorkshire,DN14 5DR,01405 722600,https://www.jdwetherspoon.com/pubs/all-pubs/england/east-yorkshire/city-and-county-goole,N
-Sanctuary Bar ,53.771874,-0.365773,"Hull University Students’ Union, Student Central",Kingston Upon Hull,East Riding of Yorkshire,HU6 7RX,01482 466284,https://www.jdwetherspoon.com/pubs/all-pubs/england/east-yorkshire/sanctuary-bar,N
+"Sanctuary Bar ",53.771874,-0.365773,"Hull University Students’ Union, Student Central",Kingston Upon Hull,East Riding of Yorkshire,HU6 7RX,01482 466284,https://www.jdwetherspoon.com/pubs/all-pubs/england/east-yorkshire/sanctuary-bar,N
 The Admiral of the Humber,53.743197,-0.343746,1 Anlaby Road,Kingston Upon Hull,East Yorkshire,HU1 2NT,01482 381850,https://www.jdwetherspoon.com/pubs/all-pubs/england/east-yorkshire/the-admiral-of-the-humber-kingston-upon-hull,N
 The Benjamin Fawcett,54.006331,-0.440338,Middle Street North,Driffield,East Yorkshire,YO25 6SW,01377 249130,https://www.jdwetherspoon.com/pubs/all-pubs/england/east-yorkshire/the-benjamin-fawcett-driffield,N
 The Cross Keys,53.843038,-0.433359,6–8 Lairgate,Beverley,East Yorkshire,HU17 8EE,01482 880388,https://www.jdwetherspoon.com/pubs/all-pubs/england/east-yorkshire/the-cross-keys-beverley,N
@@ -307,7 +307,7 @@ The Ivy Wall,52.788547,-0.151381,18–19 New Road,Spalding,Lincolnshire,PE11 1DQ
 The Joseph Morton,53.365203,-0.005115,Pawnshop Passage,Louth,Lincolnshire,LN11 9EZ,01507 353700,https://www.jdwetherspoon.com/pubs/all-pubs/england/lincolnshire/the-joseph-morton-louth,N
 The Moon Under Water,52.976692,-0.024404,6 High Street,Boston,Lincolnshire,PE21 8SH,01205 311911,https://www.jdwetherspoon.com/pubs/all-pubs/england/lincolnshire/the-moon-under-water-boston,N
 The Packhorse Inn,52.999841,-0.410512,7 Northgate,Sleaford,Lincolnshire,NG34 7BH,01529 308730,https://www.jdwetherspoon.com/pubs/all-pubs/england/lincolnshire/the-packhorse-inn-sleaford,N
-The Raymond Mays ,52.76957,-0.37678,44–48 North Street,Bourne,Lincolnshire,PE10 9AB,01778 424936,https://www.jdwetherspoon.com/pubs/all-pubs/england/lincolnshire/the-raymond-mays,N
+"The Raymond Mays ",52.76957,-0.37678,44–48 North Street,Bourne,Lincolnshire,PE10 9AB,01778 424936,https://www.jdwetherspoon.com/pubs/all-pubs/england/lincolnshire/the-raymond-mays,N
 The Red Lion,53.143959,0.3363070,2–4 Roman Bank,Skegness,Lincolnshire,PE25 2RU,01754 612567,https://www.jdwetherspoon.com/pubs/all-pubs/england/lincolnshire/the-red-lion-skegness,N
 The Square Sail,53.229820,-0.546572,Brayford Wharf North,Lincoln,Lincolnshire,LN1 1YW,01522 559920,https://www.jdwetherspoon.com/pubs/all-pubs/england/lincolnshire/the-square-sail-lincoln,N
 The Stamford Post,52.651148,-0.480789,7 Sheep Market,Stamford,Lincolnshire,PE9 2QZ,01780 753832,https://www.jdwetherspoon.com/pubs/all-pubs/england/lincolnshire/the-stamford-post-stamford,N
@@ -444,7 +444,7 @@ The Mockbeggar Hall,53.400773,-3.113316,239–241 Hoylake Road,Moreton,Merseysid
 The Navigator,53.415130,-2.905678,694 Queen’s Drive,Stoneycroft,Merseyside,L13 5UH,0151 220 2713,https://www.jdwetherspoon.com/pubs/all-pubs/england/merseyside/the-navigator-stoneycroft,N
 The Nine Arches,53.452255,-2.643989,3 Legh Street,Newton-le-Willows,Merseyside,WA12 9NE,01925 224409,https://www.jdwetherspoon.com/pubs/all-pubs/england/merseyside/the-nine-arches-newton-le-willows,N
 The North Western,53.407259,-2.977003,7 Lime Street,Liverpool,Merseyside,L1 1RJ,01517 096825,https://www.jdwetherspoon.com/pubs/all-pubs/england/merseyside/the-north-western-liverpool,N
-The Prense Well ,53.3276803,-3.099283843,5 The Mount,Heswall,Merseyside,CH60 4RE,0151 342 5599,https://www.jdwetherspoon.com/pubs/all-pubs/england/merseyside/the-prense-well,N
+"The Prense Well ",53.3276803,-3.099283843,5 The Mount,Heswall,Merseyside,CH60 4RE,0151 342 5599,https://www.jdwetherspoon.com/pubs/all-pubs/england/merseyside/the-prense-well,N
 The Queen’s Picture House,53.474184,-3.027309,47–49 South Road,Liverpool,Merseyside,L22 5PE,0151 949 2070,https://www.jdwetherspoon.com/pubs/all-pubs/england/merseyside/the-queens-picture-house-liverpool,N
 The Raven,53.463796,-2.958666,72–74 Walton Vale,Liverpool,Merseyside,L9 2BU,0151 524 1255,https://www.jdwetherspoon.com/pubs/all-pubs/england/merseyside/the-raven-liverpool,N
 The Richard John Blackler,53.406077,-2.979932,"Units 1 & 2, Charlotte Row",Liverpool,Merseyside,L1 1HU,0151 709 4802,https://www.jdwetherspoon.com/pubs/all-pubs/england/merseyside/the-richard-john-blackler-liverpool,N
@@ -468,7 +468,7 @@ The Whalebone,52.6028694,0.3760511,58–64 Bridge Street,Downham Market,Norfolk,
 The Whiffler,52.654318,1.2685630,Boundary Road,Norwich,Norfolk,NR6 5JB,01603 424042,https://www.jdwetherspoon.com/pubs/all-pubs/england/norfolk/the-whiffler-norwich,N
 The William Adams,52.5803956,1.7283005,176 High Street,Great Yarmouth,Norfolk,NR31 6RG,01493 600295,https://www.jdwetherspoon.com/pubs/all-pubs/england/norfolk/the-william-adams-gorleston-on-sea,N
 The Angel Hotel,54.486015,-0.613778,1 New Quay Road,Whitby,North Yorkshire,YO21 1DH,01947 824730,https://www.jdwetherspoon.com/pubs/all-pubs/england/north-yorkshire/the-angel-hotel-whitby,N
-The Buck Inn ,54.34155,-1.43701,237–238 High Street,Whitby,North Yorkshire,DL7 8LU,01609 761461,https://www.jdwetherspoon.com/pubs/all-pubs/england/north-yorkshire/the-buck-inn,N
+"The Buck Inn ",54.34155,-1.43701,237–238 High Street,Whitby,North Yorkshire,DL7 8LU,01609 761461,https://www.jdwetherspoon.com/pubs/all-pubs/england/north-yorkshire/the-buck-inn,N
 The Crown Inn,54.009126,-1.468513,71–75 High Street,Knaresborough,North Yorkshire,HG5 0HB,01423 867376,https://www.jdwetherspoon.com/pubs/all-pubs/england/north-yorkshire/the-crown-inn-knaresborough,N
 The Devonshire,53.960359,-2.015596,22 Newmarket Street,Skipton,North Yorkshire,BD23 2HR,01756 692590,https://www.jdwetherspoon.com/pubs/all-pubs/england/north-yorkshire/the-devonshire-skipton,N
 The Giant Bellflower,53.783565,-1.072167,47a Gowthorpe,Selby,North Yorkshire,YO8 4HF,01757 293020,https://www.jdwetherspoon.com/pubs/all-pubs/england/north-yorkshire/the-giant-bellflower-selby,N
@@ -562,7 +562,7 @@ The Queens Hotel,53.423301,-1.196687,Tickhill Road,Rotherham,South Yorkshire,S66
 The Rawson Spring,53.402014,-1.500166,Langsett Road,Sheffield,South Yorkshire,S6 2LN,0114 285 6200,https://www.jdwetherspoon.com/pubs/all-pubs/england/south-yorkshire/the-rawson-spring-sheffield,N
 The Red Lion,53.523957,-1.132554,37–38 Market Place,Doncaster,South Yorkshire,DN1 1NH,01302 732120,https://www.jdwetherspoon.com/pubs/all-pubs/england/south-yorkshire/the-red-lion-doncaster,N
 The Running Horse,53.480428,-1.010799,"After Security, Robin Hood Airport",Doncaster,South Yorkshire,DN9 3GA,01302 625557,https://www.jdwetherspoon.com/pubs/all-pubs/england/south-yorkshire/the-running-horse-after-security,N
-The Scarsdale Hundred ,53.34399,-1.349529,2 Sevenairs Road,Sheffield,South Yorkshire,S20 1NZ,0114 2480520,https://www.jdwetherspoon.com/pubs/all-pubs/england/south-yorkshire/the-scarsdale-hundred,N
+"The Scarsdale Hundred ",53.34399,-1.349529,2 Sevenairs Road,Sheffield,South Yorkshire,S20 1NZ,0114 2480520,https://www.jdwetherspoon.com/pubs/all-pubs/england/south-yorkshire/the-scarsdale-hundred,N
 The Sheaf Island,53.372833,-1.481984,"Wards Brewery, Ecclesall Road",Sheffield,South Yorkshire,S11 8HW,0114 267 7700,https://www.jdwetherspoon.com/pubs/all-pubs/england/south-yorkshire/the-sheaf-island-sheffield,N
 The Silkstone Inn,53.551168,-1.480524,64 Market Street,Barnsley,South Yorkshire,S70 1SN,01226 320860,https://www.jdwetherspoon.com/pubs/all-pubs/england/south-yorkshire/the-silkstone-inn-barnsley,N
 The Steel Foundry,53.413040,-1.412461,"Unit 12, The Oasis, Meadowhall Centre",Sheffield,South Yorkshire,S9 1EP,0114 235 4480,https://www.jdwetherspoon.com/pubs/all-pubs/england/south-yorkshire/the-steel-foundry-sheffield,N
@@ -654,7 +654,7 @@ The Malthouse,52.582960,-2.055027,The Dale,Willenhall,West Midlands,WV13 2BG,019
 The Mare Pool,52.586540,-1.828419,294 Lichfield Road,Mere Green,West Midlands,B74 2UG,0121 323 1070,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-midlands/the-mare-pool-mere-green,N
 The Moon Under Water,52.472103,-2.082466,164–166 High Street,Cradley Heath,West Midlands,B64 5HJ,01384 565419,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-midlands/the-moon-under-water-cradley-heath,N
 The Moon Under Water,52.586747,-2.124171,53–55 Lichfield Street,Wolverhampton,West Midlands,WV1 1EQ,01902 422447,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-midlands/the-moon-under-water-wolverhampton,Y
-The Navigation Inn ,52.4078348,-1.92660969,1 Wharf Road,Birmingham,West Midlands,B30 3LS,0121 451 1090,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-midlands/the-navigation-inn,N
+"The Navigation Inn ",52.4078348,-1.92660969,1 Wharf Road,Birmingham,West Midlands,B30 3LS,0121 451 1090,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-midlands/the-navigation-inn,N
 The Pump House,52.412863,-1.827759,"Unit 1 Parkgate Development, Stratford Road",Solihull,West Midlands,B90 3AQ,0121 701 5460,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-midlands/the-pump-house-solihull,N
 The Royal Tiger,52.600292,-2.081891,41–43 The High Street,Wednesfield,West Midlands,WV11 1ST,01902 307816,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-midlands/the-royal-tiger-wednesfield,N
 The Sir Henry Newbolt,52.564048,-2.080305,45–47 High Street,Bilston,West Midlands,WV14 0EP,01902 404636,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-midlands/the-sir-henry-newbolt-bilston,Y
@@ -680,7 +680,7 @@ The Red Lion,51.161299,-0.179121,"After Security, North Terminal, Gatwick Airpor
 The Six Gold Martlets,50.956203,-0.131755,49–51 Church Walk,Burgess Hill,West Sussex,RH15 9BQ,01444 231250,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-sussex/the-six-gold-martlets-burgess-hill,N
 The Three Fishes,50.813290,-0.370706,56 Chapel Road,Worthing,West Sussex,BN11 1BE,01903 288640,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-sussex/the-three-fishes-worthing,N
 Beckett's Bank,53.798580,-1.547285,28–30 Park Row,Leeds,West Yorkshire,LS1 5HU,0113 394 5900,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-yorkshire/becketts-bank-leeds,N
-Stick or Twist ,53.8027934264741,-1.54327938143067,"16, Merrion Way",Leeds,West Yorkshire,LS2 8PT,0113 887 6880,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-yorkshire/stick-or-twist,N
+"Stick or Twist ",53.8027934264741,-1.54327938143067,"16, Merrion Way",Leeds,West Yorkshire,LS2 8PT,0113 887 6880,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-yorkshire/stick-or-twist,N
 The Barum Top Inn,53.721678,-1.862741,17 Rawson Street,Halifax,West Yorkshire,HX1 1NX,01422 300488,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-yorkshire/the-barum-top-inn-halifax,N
 The Blue Bell,53.613552,-1.354261,8 Cross Hill,Pontefract,West Yorkshire,WF9 4LQ,01977 624930,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-yorkshire/the-blue-bell-pontefract,N
 The Bowling Green,53.904207,-1.692899,18 Bondgate,Otley,West Yorkshire,LS21 3AB,01943 858980,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-yorkshire/the-bowling-green-otley,N
@@ -693,10 +693,10 @@ The Commercial Inn,53.709538,-1.907801,"The Wharf, 31 Wharf Street",Sowerby Brid
 The Crossed Shuttle,53.796504,-1.661856,11 Manor House Street,Leeds,West Yorkshire,LS28 7BJ,0113 205 8190,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-yorkshire/the-crossed-shuttle-leeds,N
 The Cuthbert Brodrick,53.801747,-1.547888,99 Portland Crescent,Leeds,West Yorkshire,LS2 3AD,0113 204 8570,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-yorkshire/the-cuthbert-brodrick-leeds,N
 The Glass Blower,53.726941,-1.353853,15 Bank Street,Castleford,West Yorkshire,WF10 1JD,01977 520390,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-yorkshire/the-glass-blower-castleford,N
-The Golden Beam ,53.8169279,-1.57093120497954,Headingley Lane,Headingley,West Yorkshire,LS6 1BL,0113 278 8521,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-yorkshire/the-golden-beam,N
+"The Golden Beam ",53.8169279,-1.57093120497954,Headingley Lane,Headingley,West Yorkshire,LS6 1BL,0113 278 8521,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-yorkshire/the-golden-beam,N
 The Hedley Verity,53.802007,-1.545685,43a Woodhouse Lane,Leeds,West Yorkshire,LS1 3HQ,0113 390 7590,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-yorkshire/the-hedley-verity-leeds,N
 The Lister Arms,53.925738,-1.825689,14 The Moors Shopping Centre,Ilkley,West Yorkshire,LS29 9LB,01943 811240,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-yorkshire/the-lister-arms-ilkley,N
-The Livery Rooms ,53.868726,-1.909999,89–97 North Street,Keighley,West Yorkshire,BD21 3AA,01535 682950,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-yorkshire/the-livery-rooms-keighley,N
+"The Livery Rooms ",53.868726,-1.909999,89–97 North Street,Keighley,West Yorkshire,BD21 3AA,01535 682950,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-yorkshire/the-livery-rooms-keighley,N
 The Lord Wilson,53.645647,-1.779138,"Unit 27, Kingsgate Centre",Huddersfield,West Yorkshire,HD1 2PZ,01484 411020,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-yorkshire/the-lord-wilson-huddersfield,N
 The Myrtle Grove,53.847262,-1.837362,141 Main Street,Bingley,West Yorkshire,BD16 1AJ,01274 568637,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-yorkshire/the-myrtle-grove-bingley,N
 The Obediah Brooke,53.724622,-1.712401,19 Bradford Road,Cleckheaton,West Yorkshire,BD19 3JH,01274 860700,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-yorkshire/the-obediah-brooke-cleckheaton,N
@@ -736,13 +736,13 @@ The Central Bar,54.714593,-5.806399,13–15 High Street,Carrickfergus,County Ant
 The Spirit Merchant,54.594336,-5.701269,54–56 Regent Street,Newtownards,County Down,BT23 4LP,028 9182 4270,https://www.jdwetherspoon.com/pubs/all-pubs/n-ireland/county-down/the-spirit-merchant-newtownards,N
 The Tullow Gate,52.8363355,-6.9313622,7 Tullow Street,Carlow,County Carlow,BT23 4LP,+353 59 914 2432,https://www.jdwetherspoon.com/pubs/all-pubs/republic-of-ireland/county-carlow/the-tullow-gate-carlow,N
 The Linen Weaver,51.899285,-8.474509,"Paul Street, Plaza",Cork,County Cork,BT23 4LP,01 422 2970,https://www.jdwetherspoon.com/pubs/all-pubs/republic-of-ireland/county-cork/the-linen-weaver-cork,N
-Keavan's Port ,53.333464,-6.265332,1 Camden Street Upper,Dublin,County Dublin,D02 TC61,01 405 4790,https://www.jdwetherspoon.com/pubs/all-pubs/republic-of-ireland/county-dublin/keavans-port,N
+"Keavan's Port ",53.333464,-6.265332,1 Camden Street Upper,Dublin,County Dublin,D02 TC61,01 405 4790,https://www.jdwetherspoon.com/pubs/all-pubs/republic-of-ireland/county-dublin/keavans-port,N
 The Forty Foot,53.294142,-6.133645,"The Pavilion Centre, Marine Road",Dún Laoghaire,County Dublin,D02 TC61,01 231 1926,https://www.jdwetherspoon.com/pubs/all-pubs/republic-of-ireland/county-dublin/the-forty-foot-d%C3%BAn-laoghaire,N
-The Great Wood  ,53.389167,-6.388942,Westend Shopping Park,Dublin,County Dublin,D02 TC61,01 826 2496,https://www.jdwetherspoon.com/pubs/all-pubs/republic-of-ireland/county-dublin/the-great-wood-dublin,N
+"The Great Wood  ",53.389167,-6.388942,Westend Shopping Park,Dublin,County Dublin,D02 TC61,01 826 2496,https://www.jdwetherspoon.com/pubs/all-pubs/republic-of-ireland/county-dublin/the-great-wood-dublin,N
 The Old Borough,53.456392,-6.222072,72 Main Street,Swords,County Dublin,D02 TC61,01 808 4103,https://www.jdwetherspoon.com/pubs/all-pubs/republic-of-ireland/county-dublin/the-old-borough-swords,N
 The Silver Penny,53.349067,-6.256171,12A/12C Abbey Street Lower,Dublin,County Dublin,D02 TC61,01 874 6884,https://www.jdwetherspoon.com/pubs/all-pubs/republic-of-ireland/county-dublin/the-silver-penny-dublin,N
-The South Strand ,53.3442665,-6.2380134,1 Hanover Quay,Dublin,County Dublin,DO2 E295,01 677 8066,https://www.jdwetherspoon.com/pubs/all-pubs/republic-of-ireland/county-dublin/the-south-strand,N
-An Geata Arundel ,52.2603669,-7.1112147,9 Arundel Square,Waterford,County Waterford,X91 RD35,+353 51 873 488,https://www.jdwetherspoon.com/pubs/all-pubs/republic-of-ireland/county-waterford/an-geata-arundel,N
+"The South Strand ",53.3442665,-6.2380134,1 Hanover Quay,Dublin,County Dublin,DO2 E295,01 677 8066,https://www.jdwetherspoon.com/pubs/all-pubs/republic-of-ireland/county-dublin/the-south-strand,N
+"An Geata Arundel ",52.2603669,-7.1112147,9 Arundel Square,Waterford,County Waterford,X91 RD35,+353 51 873 488,https://www.jdwetherspoon.com/pubs/all-pubs/republic-of-ireland/county-waterford/an-geata-arundel,N
 Cross Keys,57.505782,-1.779061,Back Street,Peterhead,Aberdeen,AB42 1TH,01779 483500,https://www.jdwetherspoon.com/pubs/all-pubs/scotland/aberdeen/cross-keys-peterhead,N
 The Archibald Simpson,57.148118,-2.093642,5 Castle Street,Aberdeen,Aberdeen,AB11 5BQ,01224 621365,https://www.jdwetherspoon.com/pubs/all-pubs/scotland/aberdeen/the-archibald-simpson-aberdeen,N
 The Gordon Highlander,57.284820,-2.379670,West High Street,Inverurie,Aberdeen,AB51 3QQ,01467 626780,https://www.jdwetherspoon.com/pubs/all-pubs/scotland/aberdeen/the-gordon-highlander-inverurie,N
@@ -852,3 +852,4 @@ The Bears Head,51.439440,-3.175713,37–39 Windsor Road,Penarth,Vale of Glamorga
 The Sir Samuel Romilly,51.398496,-3.284393,Romilly Buildings,Barry,Vale of Glamorgan,CF62 7AU,01446 724900,https://www.jdwetherspoon.com/pubs/all-pubs/wales/vale-of-glamorgan/the-sir-samuel-romilly-barry,N
 The Elihu Yale,53.047074,-2.997051,44–46 Regent Street,Wrexham,Wrexham,LL11 1RR,01978 366646,https://www.jdwetherspoon.com/pubs/all-pubs/wales/wrexham/the-elihu-yale-wrexham,N
 The North and South Wales Bank,53.045207,-2.991848,14 High Street,Wrexham,Wrexham,LL13 8HP,01978 367940,https://www.jdwetherspoon.com/pubs/all-pubs/wales/wrexham/the-north-and-south-wales-bank-wrexham,N
+The London North Western,52.47703902084473,-1.8996656658390136,Birmingham New Street station,"Birmingham",Birmingham,B2 4QA,0121 643 7860,https://www.jdwetherspoon.com/pubs/all-pubs/england/west-midlands/the-london-and-north-western,Y
