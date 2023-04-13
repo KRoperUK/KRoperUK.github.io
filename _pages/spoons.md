@@ -58,6 +58,9 @@ nav: false
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
+    var lc = L.control.locate({keepCurrentZoomLevel:true,}).addTo(map);
+    lc.start();
+
     var count = 0;
 
 
