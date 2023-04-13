@@ -8,7 +8,6 @@ nav: false
 
 {% include leaflet-header.html %}
 
-
 <div id="map" class="mb-3" style="height: 30em; border-radius: 5px;"></div>
 
 <div class="progress mb-1">
@@ -41,7 +40,11 @@ nav: false
 
 </style>
 
+<span id="tile" class="invisible">{{site.maps.tiles.spoons}}</span>
+
 <script>
+    var tileURL = document.getElementById("tile").innerHTML;
+
 
     var spoonsIcon = L.icon({
         iconUrl: '/assets/img/spoons-icon.png',
@@ -53,7 +56,7 @@ nav: false
     // console.log(pubPoints);
     var map = L.map('map').setView([53.19059056109805, -1.864886360220277], 8);
 
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    var tl = L.tileLayer(tileURL, {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
@@ -61,17 +64,22 @@ nav: false
     var lc = L.control.locate({keepCurrentZoomLevel:true,}).addTo(map);
     lc.start();
 
+    var markers = L.markerClusterGroup();
+
     var count = 0;
 
 
     for (i in pubPoints) {
         let pub = pubPoints[i];
         if (pub.Visited == "Y") {
-            let marker = L.marker([pub.Latitude,pub.Longitude,], {icon: spoonsIcon}).addTo(map);
+            var marker = L.marker([pub.Latitude,pub.Longitude,], {icon: spoonsIcon})
             marker.bindPopup(pub.pubName);
+            markers.addLayer(marker);
             count += 1;
         }
     }
+
+    map.addLayer(markers);
     
     document.getElementById("progressLeft").innerHTML = count;
     document.getElementById("progressRight").innerHTML = pubPoints.length;

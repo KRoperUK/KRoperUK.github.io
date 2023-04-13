@@ -401,3 +401,6 @@ medium_zoom:
 maps:
   google:
     api_key: ${{ secrets.GOOGLE_MAPS_API }}
+  tiles:
+    spoons: "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+    hiking: "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png"
