@@ -20,7 +20,8 @@ nav: true
 {% for pub in pubs %}
 
 {% if pub.Visited == 'Y' %}
-        <div class="card shadow-none border-black mb-3 text-center card-block d-flex">
+        <a href="{{ pub.SourceURL }}" class="dumb-a">
+        <div class="card shadow-none border-black mb-3 text-center card-block d-flex dumb-a">
             <div class="card-body align-items-center d-flex justify-content-center" style="height: 6em;">
                 <h5 class="card-title">{{ pub.pubName }}</h5>
             </div>
@@ -28,6 +29,7 @@ nav: true
                 <p class="card-text">{{ pub.Locality }}</p>
             </div>
         </div>
+        </a>
 {% endif %}
 {% endfor %}
 </div>
@@ -36,6 +38,17 @@ nav: true
 
 .leaflet-marker-icon {
     border-radius: 5px;
+}
+
+.dumb-a {
+    text-decoration:none;
+    transition: all 0.1s linear;
+}
+.dumb-a:hover {
+    text-decoration:none;
+    transform: scale(1.05);
+    filter: brightness(1.05);
+    z-index: 100;
 }
 
 </style>
@@ -78,7 +91,7 @@ nav: true
         let pub = pubPoints[i];
         if (pub.Visited == "Y") {
             var marker = L.marker([pub.Latitude,pub.Longitude,], {icon: spoonsIcon})
-            marker.bindPopup(pub.pubName);
+            marker.bindPopup("<center><a href=" + pub.SourceURL + "><b>" + pub.pubName + "</b></a><br>" + pub.Locality + "</center>");
             markers.addLayer(marker);
             count += 1;
         }
