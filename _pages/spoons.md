@@ -15,7 +15,7 @@ nav: true
 </div>
   <p class="text-center mb-3"><span id="progressLeft"></span> / <span id="progressRight"></span></p>
 
-{% assign pubs = site.data.spoons_list_20221005 | sort: 'Locality' %}
+{% assign pubs = site.data.spoons_list_20230414 | sort: 'Locality' %}
 <div class="card-columns">
 {% for pub in pubs %}
 
@@ -52,7 +52,7 @@ nav: true
     });
 
 
-    var pubPoints = {{ site.data.spoons_list_20221005 | jsonify }};
+    var pubPoints = {{ site.data.spoons_list_20230414 | jsonify }};
     // console.log(pubPoints);
     var map = L.map('map').setView([53.19059056109805, -1.864886360220277], 8);
 
