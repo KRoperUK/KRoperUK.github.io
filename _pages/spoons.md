@@ -43,6 +43,7 @@ nav: true
 .dumb-a {
     text-decoration:none;
     transition: all 0.1s linear;
+    z-index: 100;
 }
 .dumb-a:hover {
     text-decoration:none;
