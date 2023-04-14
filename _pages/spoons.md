@@ -21,9 +21,9 @@ nav: true
 
 {% if pub.Visited == 'Y' %}
         <a href="{{ pub.SourceURL }}" class="dumb-a">
-        <div class="card shadow-none border-black mb-3 text-center card-block d-flex dumb-a">
+        <div class="card shadow-none border-black mb-3 text-center card-block d-flex dumb-a {% if pub.Closed == 'Y' %}bg-danger{% endif %}">
             <div class="card-body align-items-center d-flex justify-content-center" style="height: 6em;">
-                <h5 class="card-title">{{ pub.pubName }}</h5>
+                <h5 class="card-title">{% if pub.Closed == 'Y' %}<br>{% endif %}{{ pub.pubName }} {% if pub.Closed == 'Y' %}<br><small>Closed</small>{% endif %}</h5>
             </div>
             <div class="card-footer">
                 <p class="card-text">{{ pub.Locality }}</p>
@@ -64,6 +64,11 @@ nav: true
         iconSize: [24, 24],
     });
 
+    var closedSpoonsIcon = L.icon({
+        iconUrl: '/assets/img/closed-spoons-icon.png',
+        iconSize: [24, 24],
+    });
+
 
     var pubPoints = {{ site.data.spoons_list_20230414 | jsonify }};
     // console.log(pubPoints);
@@ -90,7 +95,7 @@ nav: true
     for (i in pubPoints) {
         let pub = pubPoints[i];
         if (pub.Visited == "Y") {
-            var marker = L.marker([pub.Latitude,pub.Longitude,], {icon: spoonsIcon})
+            var marker = L.marker([pub.Latitude,pub.Longitude,], {icon: (pub.Closed == "Y") ? closedSpoonsIcon : spoonsIcon})
             marker.bindPopup("<center><a href=" + pub.SourceURL + "><b>" + pub.pubName + "</b></a><br>" + pub.Locality + "</center>");
             markers.addLayer(marker);
             count += 1;
