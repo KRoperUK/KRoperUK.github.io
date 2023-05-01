@@ -8,7 +8,9 @@ nav: true
 
 {% include leaflet-header.html %}
 
-<div id="map" class="mb-3" style="height: 30em; border-radius: 5px;"></div>
+<div id="container-map">
+    <div id="map" class="mb-3" style="height: 30em; border-radius: 5px;"></div>
+</div>
 
 <div class="progress mb-1">
   <div class="progress-bar" id="pubProgressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
@@ -46,19 +48,27 @@ nav: true
     z-index: 100;
 }
 .dumb-a:hover {
+    z-index: 1000;
     text-decoration:none;
     transform: scale(1.05);
     filter: brightness(1.05);
-    z-index: 100;
+    border-radius: 0.5em;
+}
+
+#cluster-switch {
+    background-color: red;
+}
+
+.leaflet-cluster-switch {
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 </style>
 
-<span id="tile" class="invisible">{{site.maps.tiles.spoons}}</span>
 
 <script>
-    var tileURL = document.getElementById("tile").innerHTML;
-
+    const tileURL = {{ site.maps.tiles.spoons | jsonify}}
 
     var spoonsIcon = L.icon({
         iconUrl: '/assets/img/spoons-icon.png',
@@ -104,6 +114,14 @@ nav: true
     }
 
     map.addLayer(markers);
+
+    // document.getElementsByClassName("leaflet-top leaflet-left")[0].innerHTML = document.getElementsByClassName("leaflet-top leaflet-left")[0].innerHTML + 
+    //     `<div class="leaflet-bar leaflet-cluster-switch">
+    //         <a class="leaflet-bar-part leaflet-bar-part-single" title="Enable clustering" href="#" role="button" style="outline: currentcolor;">
+    //             <span class="">🏘️</span>
+    //         </a>
+    //     </div>`;
+
     
     document.getElementById("progressLeft").innerHTML = count;
     document.getElementById("progressRight").innerHTML = pubPoints.length;
