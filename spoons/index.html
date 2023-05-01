@@ -147,7 +147,9 @@
 
 <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js" charset="utf-8"></script>
 
-<div id="map" class="mb-3" style="height: 30em; border-radius: 5px;"></div>
+<div id="container-map">
+    <div id="map" class="mb-3" style="height: 30em; border-radius: 5px;"></div>
+</div>
 
 <div class="progress mb-1">
   <div class="progress-bar" id="pubProgressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
@@ -3033,19 +3035,26 @@
     z-index: 100;
 }
 .dumb-a:hover {
+    z-index: 1000;
     text-decoration:none;
     transform: scale(1.05);
     filter: brightness(1.05);
-    z-index: 100;
+    border-radius: 0.5em;
+}
+
+#cluster-switch {
+    background-color: red;
+}
+
+.leaflet-cluster-switch {
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 </style>
 
-<p><span id="tile" class="invisible">https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png</span></p>
-
 <script>
-    var tileURL = document.getElementById("tile").innerHTML;
-
+    const tileURL = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
 
     var spoonsIcon = L.icon({
         iconUrl: '/assets/img/spoons-icon.png',
@@ -3091,6 +3100,14 @@
     }
 
     map.addLayer(markers);
+
+    // document.getElementsByClassName("leaflet-top leaflet-left")[0].innerHTML = document.getElementsByClassName("leaflet-top leaflet-left")[0].innerHTML + 
+    //     `<div class="leaflet-bar leaflet-cluster-switch">
+    //         <a class="leaflet-bar-part leaflet-bar-part-single" title="Enable clustering" href="#" role="button" style="outline: currentcolor;">
+    //             <span class="">🏘️</span>
+    //         </a>
+    //     </div>`;
+
     
     document.getElementById("progressLeft").innerHTML = count;
     document.getElementById("progressRight").innerHTML = pubPoints.length;
@@ -3114,7 +3131,7 @@
     <footer class="fixed-bottom">
       <div style="text-align: center;" class="container mt-0">
         © Copyright 2023 Kieran  Roper. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
-<br>Last updated: April 19, 2023.
+<br>Last updated: May 01, 2023.
       </div>
     </footer>
 
