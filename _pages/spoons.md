@@ -18,22 +18,7 @@ nav: true
   <p class="text-center mb-3"><span id="progressLeft"></span> / <span id="progressRight"></span></p>
 
 {% assign pubs = site.data.spoons_list_20230414 | sort: 'Locality' %}
-<div class="card-columns">
-{% for pub in pubs %}
-
-{% if pub.Visited == 'Y' %}
-        <a href="{{ pub.SourceURL }}" class="dumb-a">
-        <div class="card shadow-none border-black mb-3 text-center card-block d-flex dumb-a {% if pub.Closed == 'Y' %}bg-danger{% endif %}">
-            <div class="card-body align-items-center d-flex justify-content-center" style="height: 6em;">
-                <h5 class="card-title">{% if pub.Closed == 'Y' %}<br>{% endif %}{{ pub.pubName }} {% if pub.Closed == 'Y' %}<br><small>Closed</small>{% endif %}</h5>
-            </div>
-            <div class="card-footer">
-                <p class="card-text">{{ pub.Locality }}</p>
-            </div>
-        </div>
-        </a>
-{% endif %}
-{% endfor %}
+<div class="card-columns" style="display: inline-block;" id="cards-landing">
 </div>
 
 <style>
@@ -110,17 +95,62 @@ nav: true
             marker.bindPopup("<center><a href=" + pub.SourceURL + "><b>" + pub.pubName + "</b></a><br>" + pub.Locality + "</center>");
             markers.addLayer(marker);
             count += 1;
+            
+            let cardA = document.createElement("a");
+            cardA.classList.add("dumb-a");
+
+            cardA.href = pub.SourceURL;
+
+            let card = document.createElement("div");
+            card.classList.add("card");
+            card.classList.add("shadow-none");
+            card.classList.add("border-black");
+            card.classList.add("mb-3");
+            card.classList.add("text-center");
+            card.classList.add("card-block");
+            card.classList.add("d-flex");
+            card.classList.add("dumb-a");
+            if (pub.Closed == "Y") {
+                card.classList.add("bg-danger");
+            }
+            
+            let cardInner = document.createElement("div");
+            cardInner.classList.add("card-body");
+            cardInner.classList.add("align-items-center");
+            cardInner.classList.add("d-flex");
+            cardInner.classList.add("justify-content-center");
+            cardInner.style.height = "6em";
+
+            let cardInnerText = document.createElement("h5");
+            cardInnerText.classList.add("card-title");
+            if (pub.Closed == "Y") {
+                cardInnerText.innerHTML = "<br>" + pub.pubName + "<br><small>Closed</small>";
+            } else {
+                cardInnerText.innerHTML = pub.pubName;
+            }
+
+            let cardFooter = document.createElement("div");
+            cardFooter.classList.add("card-footer");
+            
+            let cardFooterText = document.createElement("p");
+            cardFooterText.classList.add("card-text");
+            cardFooterText.innerHTML = pub.Locality;
+            // <h5 class="card-title">{% if pub.Closed == 'Y' %}<br>{% endif %}{{ pub.pubName }} {% if pub.Closed == 'Y' %}<br><small>Closed</small>{% endif %}</h5>
+            
+            cardFooter.innerHTML = cardFooterText.outerHTML;
+            cardInner.innerHTML = cardInnerText.outerHTML;
+
+            card.innerHTML = cardInner.outerHTML + cardFooter.outerHTML;
+            cardA.innerHTML = card.outerHTML;
+
+            cardInner.appendChild(cardInnerText);
+            cardFooter.innerHTML = cardFooterText.outerHTML;
+            
+            document.getElementById("cards-landing").appendChild(cardA);
         }
     }
 
     map.addLayer(markers);
-
-    // document.getElementsByClassName("leaflet-top leaflet-left")[0].innerHTML = document.getElementsByClassName("leaflet-top leaflet-left")[0].innerHTML + 
-    //     `<div class="leaflet-bar leaflet-cluster-switch">
-    //         <a class="leaflet-bar-part leaflet-bar-part-single" title="Enable clustering" href="#" role="button" style="outline: currentcolor;">
-    //             <span class="">🏘️</span>
-    //         </a>
-    //     </div>`;
 
     
     document.getElementById("progressLeft").innerHTML = count;
@@ -131,5 +161,4 @@ nav: true
     document.getElementById("pubProgressbar").ariaValueNow = count;
 
     document.getElementById("pubProgressbar").style.width = (count / pubPoints.length * 100) + "%";
-
 </script>
