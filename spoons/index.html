@@ -150,6 +150,16 @@
 <div id="container-map">
     <div id="map" class="mb-3" style="height: 30em; border-radius: 5px;"></div>
 </div>
+<center>
+    <button class="btn mb-3" id="visited" onclick="handleVisitedSwap()">
+        <i class="fas fa-map-marker-alt"></i>
+        <span id="visited-shown-text">View Unvisited</span>
+    </button>
+    <button class="btn mb-3" onclick="handleLayerSwap()">
+        <i class="fas fa-map"></i>
+        <span>Change Map</span>
+    </button>
+</center>
 
 <div class="progress mb-1">
   <div class="progress-bar" id="pubProgressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
@@ -191,10 +201,17 @@
 
 <script>
     const tileURL = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+    unvisitedShown = false;
 
     var spoonsIcon = L.icon({
         iconUrl: '/assets/img/spoons-icon.png',
         iconSize: [24, 24],
+    });
+
+    var greySpoonsIcon = L.divIcon({
+        // iconUrl: '/assets/img/spoons-icon.png',
+        iconSize: [24, 24],
+        html: '<img alt="W" src="/assets/img/spoons-icon.png" style="display: block; color: white; width: 100%; height: 100%;background-color: grey; filter: sepia(); "></img>'
     });
 
     var closedSpoonsIcon = L.icon({
@@ -211,6 +228,10 @@
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
+    var tlTwo = L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    })
 
     function handleLocationError() {
         console.log("Location refused");
@@ -220,7 +241,8 @@
 
     lc.start();
 
-    var markers = L.markerClusterGroup();
+    var visitedMarkers = L.markerClusterGroup();
+    var unvisitedMarkers = L.markerClusterGroup();
 
     var count = 0;
 
@@ -229,8 +251,8 @@
         let pub = pubPoints[i];
         if (pub.Visited == "Y") {
             var marker = L.marker([pub.Latitude,pub.Longitude,], {icon: (pub.Closed == "Y") ? closedSpoonsIcon : spoonsIcon})
-            marker.bindPopup("<center><a href=" + pub.SourceURL + "><b>" + pub.pubName + "</b></a><br>" + pub.Locality + "</center>");
-            markers.addLayer(marker);
+            marker.bindPopup(`<center><a href="${pub.SourceURL}"><b>${pub.pubName}</b></a><br>${pub.Locality}</center>`);
+            visitedMarkers.addLayer(marker);
             count += 1;
             
             let cardA = document.createElement("a");
@@ -272,7 +294,6 @@
             let cardFooterText = document.createElement("p");
             cardFooterText.classList.add("card-text");
             cardFooterText.innerHTML = pub.Locality;
-            // <h5 class="card-title"> </h5>
             
             cardFooter.innerHTML = cardFooterText.outerHTML;
             cardInner.innerHTML = cardInnerText.outerHTML;
@@ -284,10 +305,17 @@
             cardFooter.innerHTML = cardFooterText.outerHTML;
             
             document.getElementById("cards-landing").appendChild(cardA);
+        } else {
+            var marker = L.marker([pub.Latitude,pub.Longitude,], {icon: (pub.Closed == "Y") ? closedSpoonsIcon : greySpoonsIcon})
+            marker.bindPopup(`<center><a href="${pub.SourceURL}"><b>${pub.pubName}</b></a><br>${pub.Locality}</center><center><small><i>Unvisited</i></small></center>`);
+            unvisitedMarkers.addLayer(marker);
+
         }
     }
-
-    map.addLayer(markers);
+    
+    map.addLayer(visitedMarkers);
+    // map.addLayer(unvisitedMarkers);
+    // unvisitedShown = true;
 
     
     document.getElementById("progressLeft").innerHTML = count;
@@ -298,6 +326,27 @@
     document.getElementById("pubProgressbar").ariaValueNow = count;
 
     document.getElementById("pubProgressbar").style.width = (count / pubPoints.length * 100) + "%";
+
+    function handleVisitedSwap() {
+        if (unvisitedShown) {
+            map.removeLayer(unvisitedMarkers);
+            document.getElementById("visited-shown-text").innerHTML = "View Unvisited";
+            unvisitedShown = false;
+        } else {
+            map.addLayer(unvisitedMarkers);
+            document.getElementById("visited-shown-text").innerHTML = "Hide Unvisited";
+            unvisitedShown = true;
+        }
+    }
+    function handleLayerSwap() {
+        if (map.hasLayer(tl)) {
+            map.removeLayer(tl);
+            map.addLayer(tlTwo);
+        } else {
+            map.removeLayer(tlTwo);
+            map.addLayer(tl);
+        }
+    }
 </script>
 
 
@@ -311,7 +360,7 @@
     <footer class="fixed-bottom">
       <div style="text-align: center;" class="container mt-0">
         © Copyright 2023 Kieran  Roper. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>.
-<br>Last updated: May 07, 2023.
+<br>Last updated: May 08, 2023.
       </div>
     </footer>
 
