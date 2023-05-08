@@ -11,6 +11,12 @@ nav: true
 <div id="container-map">
     <div id="map" class="mb-3" style="height: 30em; border-radius: 5px;"></div>
 </div>
+<center>
+    <button class="btn mb-3" id="visited" onclick="handleVisitedSwap()">
+        <i class="fas fa-map-marker-alt"></i>
+        <span id="visited-shown-text">View Unvisited</span>
+    </button>
+</center>
 
 <div class="progress mb-1">
   <div class="progress-bar" id="pubProgressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
@@ -54,10 +60,17 @@ nav: true
 
 <script>
     const tileURL = {{ site.maps.tiles.spoons | jsonify}}
+    unvisitedShown = false;
 
     var spoonsIcon = L.icon({
         iconUrl: '/assets/img/spoons-icon.png',
         iconSize: [24, 24],
+    });
+
+    var greySpoonsIcon = L.divIcon({
+        // iconUrl: '/assets/img/spoons-icon.png',
+        iconSize: [24, 24],
+        html: '<img alt="W" src="/assets/img/spoons-icon.png" style="display: block; color: white; width: 100%; height: 100%;background-color: grey; filter: sepia(); "></img>'
     });
 
     var closedSpoonsIcon = L.icon({
@@ -83,7 +96,8 @@ nav: true
 
     lc.start();
 
-    var markers = L.markerClusterGroup();
+    var visitedMarkers = L.markerClusterGroup();
+    var unvisitedMarkers = L.markerClusterGroup();
 
     var count = 0;
 
@@ -92,8 +106,8 @@ nav: true
         let pub = pubPoints[i];
         if (pub.Visited == "Y") {
             var marker = L.marker([pub.Latitude,pub.Longitude,], {icon: (pub.Closed == "Y") ? closedSpoonsIcon : spoonsIcon})
-            marker.bindPopup("<center><a href=" + pub.SourceURL + "><b>" + pub.pubName + "</b></a><br>" + pub.Locality + "</center>");
-            markers.addLayer(marker);
+            marker.bindPopup(`<center><a href="${pub.SourceURL}"><b>${pub.pubName}</b></a><br>${pub.Locality}</center>`);
+            visitedMarkers.addLayer(marker);
             count += 1;
             
             let cardA = document.createElement("a");
@@ -135,7 +149,6 @@ nav: true
             let cardFooterText = document.createElement("p");
             cardFooterText.classList.add("card-text");
             cardFooterText.innerHTML = pub.Locality;
-            // <h5 class="card-title">{% if pub.Closed == 'Y' %}<br>{% endif %}{{ pub.pubName }} {% if pub.Closed == 'Y' %}<br><small>Closed</small>{% endif %}</h5>
             
             cardFooter.innerHTML = cardFooterText.outerHTML;
             cardInner.innerHTML = cardInnerText.outerHTML;
@@ -147,10 +160,17 @@ nav: true
             cardFooter.innerHTML = cardFooterText.outerHTML;
             
             document.getElementById("cards-landing").appendChild(cardA);
+        } else {
+            var marker = L.marker([pub.Latitude,pub.Longitude,], {icon: (pub.Closed == "Y") ? closedSpoonsIcon : greySpoonsIcon})
+            marker.bindPopup(`<center><a href="${pub.SourceURL}"><b>${pub.pubName}</b></a><br>${pub.Locality}</center><center><small><i>Unvisited</i></small></center>`);
+            unvisitedMarkers.addLayer(marker);
+
         }
     }
-
-    map.addLayer(markers);
+    
+    map.addLayer(visitedMarkers);
+    // map.addLayer(unvisitedMarkers);
+    // unvisitedShown = true;
 
     
     document.getElementById("progressLeft").innerHTML = count;
@@ -161,4 +181,16 @@ nav: true
     document.getElementById("pubProgressbar").ariaValueNow = count;
 
     document.getElementById("pubProgressbar").style.width = (count / pubPoints.length * 100) + "%";
+
+    function handleVisitedSwap() {
+        if (unvisitedShown) {
+            map.removeLayer(unvisitedMarkers);
+            document.getElementById("visited-shown-text").innerHTML = "View Unvisited";
+            unvisitedShown = false;
+        } else {
+            map.addLayer(unvisitedMarkers);
+            document.getElementById("visited-shown-text").innerHTML = "Hide Unvisited";
+            unvisitedShown = true;
+        }
+    }
 </script>
