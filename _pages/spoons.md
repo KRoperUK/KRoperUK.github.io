@@ -16,6 +16,10 @@ nav: true
         <i class="fas fa-map-marker-alt"></i>
         <span id="visited-shown-text">View Unvisited</span>
     </button>
+    <button class="btn mb-3" id="" onclick="handleLayerSwap()">
+        <i class="fas fa-map"></i>
+        <span id="">Change Map</span>
+    </button>
 </center>
 
 <div class="progress mb-1">
@@ -87,6 +91,10 @@ nav: true
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
+    var tlTwo = L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    })
 
     function handleLocationError() {
         console.log("Location refused");
@@ -191,6 +199,15 @@ nav: true
             map.addLayer(unvisitedMarkers);
             document.getElementById("visited-shown-text").innerHTML = "Hide Unvisited";
             unvisitedShown = true;
+        }
+    }
+    function handleLayerSwap() {
+        if (map.hasLayer(tl)) {
+            map.removeLayer(tl);
+            map.addLayer(tlTwo);
+        } else {
+            map.removeLayer(tlTwo);
+            map.addLayer(tl);
         }
     }
 </script>
