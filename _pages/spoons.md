@@ -26,6 +26,10 @@ nav: true
         <i class="fas fa-map"></i>
         <span id="">Change Map</span>
     </button>
+    <button class="btn mb-3" id="grouping" onclick="handleGroupingSwap()">
+        <i class="fas fa-layer-group"></i>
+        <span id="visited-shown-text">Toggle Grouping</span>
+    </button>
 </center>
 
 <div class="progress mb-1">
@@ -71,6 +75,7 @@ nav: true
 <script>
     const tileURL = {{ site.maps.tiles.spoons | jsonify}}
     unvisitedShown = false;
+    groupedMarkers = true;
 
     var spoonsIcon = L.icon({
         iconUrl: '/assets/img/spoons-icon.png',
@@ -113,6 +118,9 @@ nav: true
 
     var visitedMarkers = L.markerClusterGroup();
     var unvisitedMarkers = L.markerClusterGroup();
+    
+    var visitedMarkersUngroup = L.layerGroup();
+    var unvisitedMarkersUngroup = L.layerGroup();
 
     var count = 0;
 
@@ -123,6 +131,7 @@ nav: true
             var marker = L.marker([pub.Latitude,pub.Longitude,], {icon: (pub.Closed == "Y") ? closedSpoonsIcon : spoonsIcon})
             marker.bindPopup(`<center><a href="${pub.SourceURL}"><b>${pub.pubName}</b></a><br>${pub.Locality}</center>`);
             visitedMarkers.addLayer(marker);
+            visitedMarkersUngroup.addLayer(marker);
             count += 1;
             
             let cardA = document.createElement("a");
@@ -179,6 +188,7 @@ nav: true
             var marker = L.marker([pub.Latitude,pub.Longitude,], {icon: (pub.Closed == "Y") ? closedSpoonsIcon : greySpoonsIcon})
             marker.bindPopup(`<center><a href="${pub.SourceURL}"><b>${pub.pubName}</b></a><br>${pub.Locality}</center><center><small><i>Unvisited</i></small></center>`);
             unvisitedMarkers.addLayer(marker);
+            unvisitedMarkersUngroup.addLayer(marker);
 
         }
     }
@@ -198,14 +208,26 @@ nav: true
     document.getElementById("pubProgressbar").style.width = (count / pubPoints.length * 100) + "%";
 
     function handleVisitedSwap() {
-        if (unvisitedShown) {
-            map.removeLayer(unvisitedMarkers);
-            document.getElementById("visited-shown-text").innerHTML = "View Unvisited";
-            unvisitedShown = false;
+        if (groupedMarkers){
+            if (unvisitedShown) {
+                map.removeLayer(unvisitedMarkers);
+                document.getElementById("visited-shown-text").innerHTML = "View Unvisited";
+                unvisitedShown = false;
+            } else {
+                map.addLayer(unvisitedMarkers);
+                document.getElementById("visited-shown-text").innerHTML = "Hide Unvisited";
+                unvisitedShown = true;
+            }
         } else {
-            map.addLayer(unvisitedMarkers);
-            document.getElementById("visited-shown-text").innerHTML = "Hide Unvisited";
-            unvisitedShown = true;
+            if (unvisitedShown) {
+                map.removeLayer(unvisitedMarkersUngroup);
+                document.getElementById("visited-shown-text").innerHTML = "View Unvisited";
+                unvisitedShown = false;
+            } else {
+                map.addLayer(unvisitedMarkersUngroup);
+                document.getElementById("visited-shown-text").innerHTML = "Hide Unvisited";
+                unvisitedShown = true;
+            }
         }
     }
     function handleLayerSwap() {
@@ -215,6 +237,27 @@ nav: true
         } else {
             map.removeLayer(tlTwo);
             map.addLayer(tl);
+        }
+    }
+    function handleGroupingSwap() {
+        if (groupedMarkers) {
+            map.addLayer(visitedMarkersUngroup);
+            map.removeLayer(visitedMarkers);
+
+            if (unvisitedShown) {
+                map.addLayer(unvisitedMarkersUngroup);
+                map.removeLayer(unvisitedMarkers);
+            }
+            groupedMarkers = false;
+        } else {
+            map.addLayer(visitedMarkers);
+            map.removeLayer(visitedMarkersUngroup);
+
+            if (unvisitedShown) {
+                map.addLayer(unvisitedMarkers);
+                map.removeLayer(unvisitedMarkersUngroup);
+            }
+            groupedMarkers = true;
         }
     }
 </script>
