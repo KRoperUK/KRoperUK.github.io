@@ -8,6 +8,12 @@ nav: true
 
 {% include leaflet-header.html %}
 
+<div class="alert alert-warning" id="location-alert" role="alert" hidden>
+    <i class="fas fa-exclamation-triangle"></i>
+    <span style="color: black;">You did not allow location access.</span>
+    <a onclick="document.getElementById('location-alert').hidden = true;" style="float: right; margin-top: 2px;"><i class="fas fa-times" ></i></a>
+</div>
+
 <div id="container-map">
     <div id="map" class="mb-3" style="height: 30em; border-radius: 5px;"></div>
 </div>
@@ -98,6 +104,7 @@ nav: true
 
     function handleLocationError() {
         console.log("Location refused");
+        document.getElementById('location-alert').hidden = false;
     }
 
     var lc = L.control.locate({keepCurrentZoomLevel:true,onLocationError: handleLocationError,}).addTo(map);
