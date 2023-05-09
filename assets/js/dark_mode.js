@@ -3,6 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     mode_toggle.addEventListener("click", function() {
         toggleTheme(localStorage.getItem("theme"));
+        
+        const event = new Event('itemInserted');
+        event.key = "theme";
+        event.value = localStorage.getItem("theme");
+        document.dispatchEvent(event);
     });
 });
 
