@@ -101,11 +101,17 @@ nav: true
     var tl = L.tileLayer("https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png", {
         maxZoom: 20,
         attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
-    }).addTo(map);
+    })
     var tlTwo = L.tileLayer("https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png", {
         maxZoom: 20,
         attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
     })
+
+    if (localStorage.getItem('theme') == 'light') {
+        tl.addTo(map);
+    } else {
+        tlTwo.addTo(map);
+    }
 
     function handleLocationError() {
         console.log("Location refused");
@@ -196,17 +202,25 @@ nav: true
     map.addLayer(visitedMarkers);
     // map.addLayer(unvisitedMarkers);
     // unvisitedShown = true;
-
+    
     
     document.getElementById("progressLeft").innerHTML = count;
     document.getElementById("progressRight").innerHTML = pubPoints.length;
-
-
+    
+    
     document.getElementById("pubProgressbar").ariaValueMax = pubPoints.length;
     document.getElementById("pubProgressbar").ariaValueNow = count;
-
+    
     document.getElementById("pubProgressbar").style.width = (count / pubPoints.length * 100) + "%";
+    
 
+    const localStorageSetHandler = function(e) {
+
+        handleLayerSwap();
+    };
+
+    document.addEventListener("itemInserted", localStorageSetHandler, false);
+    
     function handleVisitedSwap() {
         if (groupedMarkers){
             if (unvisitedShown) {
@@ -241,8 +255,8 @@ nav: true
     }
     function handleGroupingSwap() {
         if (groupedMarkers) {
-            map.addLayer(visitedMarkersUngroup);
             map.removeLayer(visitedMarkers);
+            map.addLayer(visitedMarkersUngroup);
 
             if (unvisitedShown) {
                 map.addLayer(unvisitedMarkersUngroup);
@@ -250,8 +264,9 @@ nav: true
             }
             groupedMarkers = false;
         } else {
-            map.addLayer(visitedMarkers);
             map.removeLayer(visitedMarkersUngroup);
+            map.addLayer(visitedMarkers);
+
 
             if (unvisitedShown) {
                 map.addLayer(unvisitedMarkers);
