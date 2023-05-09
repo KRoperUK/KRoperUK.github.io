@@ -219,6 +219,8 @@ nav: true
         handleLayerSwap();
     };
 
+    handleGroupingSwap();
+
     document.addEventListener("itemInserted", localStorageSetHandler, false);
     
     function handleVisitedSwap() {
