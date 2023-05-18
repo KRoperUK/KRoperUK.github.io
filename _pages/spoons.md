@@ -120,6 +120,45 @@ nav: true
 
     var lc = L.control.locate({keepCurrentZoomLevel:true,onLocationError: handleLocationError,}).addTo(map);
 
+    L.Control.Watermark = L.Control.extend({
+    onAdd: function(map) {
+        var visitedD = L.DomUtil.create('div');
+        var visitedA = L.DomUtil.create('a');
+        var layerA = L.DomUtil.create('a');
+        var groupA = L.DomUtil.create('a');
+
+        visitedD.className = 'leaflet-bar leaflet-control';
+
+        // img.src = '../../docs/images/logo.png';
+        visitedA.href="javascript:handleVisitedSwap()";
+        visitedA.innerHTML=`<i style="color: black;" class=\"fas fa-map-marker-alt\"></i>`;
+
+        layerA.href="javascript:handleLayerSwap()";
+        layerA.innerHTML=`<i style="color: black;" class=\"fas fa-map\"></i>`;
+
+        groupA.href="javascript:handleGroupingSwap()";
+        groupA.innerHTML=`<i style="color: black;" class=\"fas fa-layer-group\"></i>`;
+
+        visitedD.appendChild(visitedA);
+        visitedD.appendChild(layerA);
+        visitedD.appendChild(groupA);
+        
+        return visitedD;
+    },
+
+    onRemove: function(map) {
+        // Nothing to do here
+    }
+    });
+
+    L.control.watermark = function(opts) {
+        return new L.Control.Watermark(opts);
+    }
+
+    var lw = L.control.watermark({ position: 'topright' }).addTo(map);
+    // lw.start();
+
+
     lc.start();
 
     var visitedMarkers = L.markerClusterGroup();
