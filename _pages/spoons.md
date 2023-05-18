@@ -74,8 +74,12 @@ nav: true
 
 <script>
     const tileURL = {{ site.maps.tiles.spoons | jsonify}}
+
     unvisitedShown = false;
-    groupedMarkers = true;
+    localStorage.getItem('unvisitedShown') == 'true' ? unvisitedShown = true : unvisitedShown = false;
+    
+    groupedMarkers = false;
+    localStorage.getItem('groupedMarkers') == 'true' ? groupedMarkers = true : groupedMarkers = false;
 
     var spoonsIcon = L.icon({
         iconUrl: '/assets/img/spoons-icon.png',
@@ -239,6 +243,16 @@ nav: true
     }
     
     map.addLayer(visitedMarkers);
+
+    if (groupedMarkers != true) {
+        map.removeLayer(visitedMarkers);
+        map.addLayer(visitedMarkersUngroup);
+
+        if (unvisitedShown) {
+            map.addLayer(unvisitedMarkersUngroup);
+            map.removeLayer(unvisitedMarkers);
+        }
+    }
     // map.addLayer(unvisitedMarkers);
     // unvisitedShown = true;
     
@@ -258,8 +272,6 @@ nav: true
         handleLayerSwap();
     };
 
-    handleGroupingSwap();
-
     document.addEventListener("itemInserted", localStorageSetHandler, false);
     
     function handleVisitedSwap() {
@@ -267,20 +279,24 @@ nav: true
             if (unvisitedShown) {
                 map.removeLayer(unvisitedMarkers);
                 document.getElementById("visited-shown-text").innerHTML = "View Unvisited";
+                localStorage.setItem("unvisitedShown", "false");
                 unvisitedShown = false;
             } else {
                 map.addLayer(unvisitedMarkers);
                 document.getElementById("visited-shown-text").innerHTML = "Hide Unvisited";
+                localStorage.setItem("unvisitedShown", "true");
                 unvisitedShown = true;
             }
         } else {
             if (unvisitedShown) {
                 map.removeLayer(unvisitedMarkersUngroup);
                 document.getElementById("visited-shown-text").innerHTML = "View Unvisited";
+                localStorage.setItem("unvisitedShown", "false");
                 unvisitedShown = false;
             } else {
                 map.addLayer(unvisitedMarkersUngroup);
                 document.getElementById("visited-shown-text").innerHTML = "Hide Unvisited";
+                localStorage.setItem("unvisitedShown", "true");
                 unvisitedShown = true;
             }
         }
@@ -303,6 +319,7 @@ nav: true
                 map.addLayer(unvisitedMarkersUngroup);
                 map.removeLayer(unvisitedMarkers);
             }
+            localStorage.setItem("groupedMarkers", "false");
             groupedMarkers = false;
         } else {
             map.removeLayer(visitedMarkersUngroup);
@@ -313,6 +330,7 @@ nav: true
                 map.addLayer(unvisitedMarkers);
                 map.removeLayer(unvisitedMarkersUngroup);
             }
+            localStorage.setItem("groupedMarkers", "true");
             groupedMarkers = true;
         }
     }
