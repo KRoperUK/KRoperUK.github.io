@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://KRoperUK.github.io/sitemap.xml
+Sitemap: https://kroper.uk/sitemap.xml
