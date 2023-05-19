@@ -2,7 +2,7 @@
 layout: project
 title: Voting App
 description: A voting app to assist committees and societies with elections.
-img: 
+img: "/assets/img/voting-ready.png"
 importance: 1
 category: fun
 location:
@@ -12,10 +12,3 @@ location:
 repo: KRoperUK/voting-app
 ---
 
-<center>
-
-    <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-        {% include repository/repo.html repository=page.repo %}
-    </div>
-
-</center>
