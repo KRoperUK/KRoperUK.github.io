@@ -122,23 +122,6 @@
             <h1 class="post-title">UoB Study Spaces</h1>
             <p class="post-description">A simple website to show the study spaces available at the University of Birmingham.</p>
             
-            <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/study-spaces-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/study-spaces-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/study-spaces-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/study-spaces.png" width="50%" height="auto" alt="UoB Study Spaces" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-            
   
             
             
@@ -157,6 +140,13 @@
   
             <h2 id="live-website"><a href="https://uobstudy.space" rel="external nofollow noopener" target="_blank">Live Website</a></h2>
 
+<div id="previewButton">
+    <a href="javascript:enablePreview()"><button class="button-2" role="button">Enable Preview</button></a>
+</div>
+<iframe id="preview" hidden="" title="UoB Study Spaces"></iframe>
+<p><br></p>
+<h2 id="features">Features</h2>
+
 <ul>
   <li>Uses <a href="https://github.com/opening-hours/opening_hours.js/" rel="external nofollow noopener" target="_blank">operating_hours.js</a>
 </li>
@@ -166,6 +156,21 @@
   <li>Works on desktop and mobile.</li>
   <li>Dark mode support.</li>
 </ul>
+
+<script>
+    function enablePreview() {
+        document.getElementById("preview").setAttribute("style", "width:100%; height: 80vh;");
+        document.getElementById("preview").setAttribute("src", "https://www.uobstudy.space");
+
+        document.getElementById("preview").removeAttribute("hidden");
+        document.getElementById("previewButton").remove();
+        document.getElementById("preview").focus();
+        document.getElementById("preview").scrollIntoView();
+
+        window.scrollBy(0, - 2 * document.getElementById("navbar").offsetHeight);
+    }
+</script>
+
 
           </header>
 
