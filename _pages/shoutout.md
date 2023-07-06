@@ -20,8 +20,12 @@ var txt = `These past three weeks have been a brilliant time of learning, gettin
 
 §Once again thank you very much for all that you have done. Good luck to you and Connor with the next academic year, and good luck with A-level.
 
+§- Kieran :)
+
 §P.S: I shall definitely help you out with it, if you require.`; /* The text */
 var speed = 20; /* The speed/duration of the effect in milliseconds */
+
+var openColon = false;
 
 function handleButton() {
     document.getElementById("button-shoutout").remove();
