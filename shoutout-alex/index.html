@@ -10,10 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>projects | Kieran  Roper</title>
+    <title>shoutout to alex | Kieran  Roper</title>
     <meta name="author" content="Kieran  Roper">
-    <meta name="description" content="2nd Year Computer Science student at the University of Birmingham
-">
+    <meta name="description" content="">
 
 
     <!-- Bootstrap & MDB -->
@@ -33,7 +32,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%91%A8%F0%9F%8F%BC%E2%80%8D%F0%9F%92%BB&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://kroper.uk/projects/">
+    <link rel="canonical" href="https://kroper.uk/shoutout-alex/">
     
     <!-- Dark Mode -->
     
@@ -83,8 +82,8 @@
               <li id="nav-spoons" class="nav-item ">
                 <a class="nav-link" href="/spoons/">spoons</a>
               </li>
-              <li id="nav-projects" class="nav-item active">
-                <a class="nav-link" href="/projects/">projects<span class="sr-only">(current)</span></a>
+              <li id="nav-projects" class="nav-item ">
+                <a class="nav-link" href="/projects/">projects</a>
               </li>
               <li id="nav-repositories" class="nav-item ">
                 <a class="nav-link" href="/repositories/">repositories</a>
@@ -120,77 +119,47 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">projects</h1>
+            <h1 class="post-title">shoutout to alex</h1>
             <p class="post-description"></p>
           </header>
 
           <article>
-            <!-- pages/projects.md -->
-<div class="projects">
-<!-- Display projects without categories --><!-- Generate cards for each project -->
-  <div class="grid">
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/1_project/">
-      <div class="card hoverable">
-<figure>
+            <div id="shoutout-content"></div>
 
-  <picture>
+<p><input class="button-2 w-100 border" style="height:5em" id="button-shoutout" type="button" value="Begin Shoutout" onclick="handleButton();"></p>
+
+<script>    
+var i = 0;
+var txt = `These past three weeks have been a brilliant time of learning, getting a great insight into teaching and finding out about education behind the scenes. Thanks to your mentorship I have learned so much and have enjoyed it thoroughly. You might have only been here since January but you and the rest of your department and the wider Enterprise (the organisational structure of GSA is still a little hazy sometimes) have been so welcoming and a group of people I wish to cross paths with and contact in my future.
+
+§I will think fondly of my time at GSA under your wing. Thanks to you and the rest of the department, my premonitions of teaching have been subdued and I have enjoyed it so much.
+
+§My placement will be a year of learning my craft and passion and putting it into practice. I hope to learn at least 17.333333 times as much stuff as I have at GSA (given it's ~52 weeks long), but I sincerely doubt it will be that enlightening. 😄
+
+§Once again thank you very much for all that you have done. Good luck to you and Connor with the next academic year, and good luck with A-level.
+
+§P.S: I shall definitely help you out with it, if you require.`; /* The text */
+var speed = 20; /* The speed/duration of the effect in milliseconds */
+
+function handleButton() {
+    document.getElementById("button-shoutout").remove();
+    typeWriter();
+}
+
+function typeWriter() {
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/voting-ready-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/voting-ready-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/voting-ready-1400.webp"></source>
-    
+  if (i < txt.length) {
+    if (txt.charAt(i) == "§"){
+        document.getElementById("shoutout-content").innerHTML += "<br /><br />";
+    } else {
+        document.getElementById("shoutout-content").innerHTML += txt.charAt(i);
+    }
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/voting-ready.png" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">Voting App</h2>
-          <p class="card-text">A voting app to assist committees and societies with elections.</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/2_project/">
-      <div class="card hoverable">
-<figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/study-spaces-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/study-spaces-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/study-spaces-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/study-spaces.png" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">UoB Study Spaces</h2>
-          <p class="card-text">A simple website to show the study spaces available at the University of Birmingham.</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-  </div>
-</div>
 
           </article>
 
