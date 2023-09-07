@@ -17,10 +17,15 @@ social: true  # includes social icons at the bottom of the page
 ## Interests
 
 - Public transport and infrastructure
-- Hiking
-- DevOps
+- Site Reliability Engineering
 
 ## Currently working on
 
-- JHipster based team project (web application)
-- [Svelte + PocketBase based voting web application](projects/1_project)
+- [SellyHouses](https://kroper.uk/SellyHouses)
+  - A collection of student properties available in Selly Oak - the student village for the University of Birmingham.
+
+- [PronounceIt](https://github.com/KRoperUK/PronounceIt)
+  - An app to help with the pronunciation of words and names.
+
+- [AutoExam](https://github.com/KRoperUK/AutoExam)
+  - A Python-based exam creation and automation suite.
