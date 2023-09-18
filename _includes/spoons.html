@@ -167,7 +167,7 @@ var count = 0;
 
 for (i in pubPoints) {
     let pub = pubPoints[i];
-    let direction_URL = new URL(`&query=${pub.Latitude},${pub.Longitude}`, "https://www.google.com/maps/dir/?api=1").href;
+    let direction_URL = new URL(`?api=1&destination=${pub.Latitude},${pub.Longitude}`, "https://www.google.com/maps/dir/").href;
     if (pub.Visited == "Y") {
         var marker = L.marker([pub.Latitude,pub.Longitude,], {icon: (pub.Closed == "Y") ? closedSpoonsIcon : spoonsIcon})
         marker.bindPopup(`<center><a href="${pub.SourceURL}"><b>${pub.pubName}</b></a><br>${pub.Locality}<br><a href="${direction_URL}">Directions</a></center>`);
