@@ -1,5 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://kroper.uk/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kroper.uk/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-12-08T21:48:58+00:00</updated><id>https://kroper.uk/feed.xml</id><title type="html">blank</title><subtitle>2nd Year Computer Science student at the University of Birmingham
-</subtitle><entry><title type="html">Chrome Extension fun</title><link href="https://kroper.uk/blog/2023/chrome-extension-fun/" rel="alternate" type="text/html" title="Chrome Extension fun" /><published>2023-05-16T00:00:00+00:00</published><updated>2023-05-16T00:00:00+00:00</updated><id>https://kroper.uk/blog/2023/chrome-extension-fun</id><content type="html" xml:base="https://kroper.uk/blog/2023/chrome-extension-fun/"><![CDATA[<p>I have recently started work on my <a href="https://github.com/KRoperUK/BulkSS">first Chrome Extension</a>.</p>]]></content><author><name></name></author><category term="general" /><category term="general" /><summary type="html"><![CDATA[Experimenting with Chrome Extensions.]]></summary></entry><entry><title type="html">Study spaces at UoB</title><link href="https://kroper.uk/blog/2023/study-spaces-at-uob/" rel="alternate" type="text/html" title="Study spaces at UoB" /><published>2023-04-04T00:00:00+00:00</published><updated>2023-04-04T00:00:00+00:00</updated><id>https://kroper.uk/blog/2023/study-spaces-at-uob</id><content type="html" xml:base="https://kroper.uk/blog/2023/study-spaces-at-uob/"><![CDATA[<h2 id="on-campus">On Campus</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://kroper.uk/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kroper.uk/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-12-23T13:29:49+00:00</updated><id>https://kroper.uk/feed.xml</id><title type="html">blank</title><subtitle>2nd Year Computer Science student at the University of Birmingham
+</subtitle><entry><title type="html">Sorting out your bills</title><link href="https://kroper.uk/blog/2023/bills/" rel="alternate" type="text/html" title="Sorting out your bills" /><published>2023-12-03T00:00:00+00:00</published><updated>2023-12-03T00:00:00+00:00</updated><id>https://kroper.uk/blog/2023/bills</id><content type="html" xml:base="https://kroper.uk/blog/2023/bills/"><![CDATA[<h2 id="what-bills">What bills?</h2>
+
+<p>Usually, you will need to pay the following bills</p>
+
+<ul>
+  <li>Electric and Gas (Energy)</li>
+  <li>Water</li>
+</ul>
+
+<p>You may also want the following:</p>
+
+<ul>
+  <li>Broadband</li>
+  <li>TV Licence</li>
+</ul>
+
+<p>You will also need to check on:</p>
+
+<ul>
+  <li>Council Tax</li>
+</ul>
+
+<p>Lets take these step by step…</p>
+
+<h3 id="energy-bills">Energy Bills</h3>
+
+<p>Most properties will use both electric and gas. Some properties may use electric only.</p>
+
+<p>Currently the UK government has put an energy price cap in place. This means suppliers are only allowed to charge upto the price cap on standard tarrifs.</p>
+
+<h4 id="fixed-vs-variable-energy-tarrifs">Fixed vs Variable Energy Tarrifs</h4>
+
+<p>Fixed tarrifs allow you to lock into a supplier for a certain amount of time - usually 12 or 24 months. These fixed plans may benefit you with lower costs, however I recommend you go with a Variable tarriff.</p>
+
+<h4 id="who-should-i-use">Who should I use?</h4>
+
+<p>Honestly, it does not really matter. I recommend you go with Octopus Energy as you can receive £50 credit when using my referral code:</p>
+
+<h3 id="water-bills">Water Bills</h3>
+
+<p>Unlike energy bills, water suppliers are region specific. For example, in most of the West Midlands it will be Severn Trent providing your water, in the South East and London it will be Thames Water. This means you will have to go with that supplier for your water, sewerage, and surface run off. Yes that’s right, your bill to your water supplier is split into those three categories.</p>
+
+<h3 id="broadband">Broadband</h3>
+
+<p>Be weary of locked contracts. Most standard broadband contracts are 18 months. Others are 12 months but providers may offset this by charging a higher monthly cost or higher set-up fees.</p>]]></content><author><name></name></author><category term="student-guides" /><category term="student" /><summary type="html"><![CDATA[“”]]></summary></entry><entry><title type="html">Chrome Extension fun</title><link href="https://kroper.uk/blog/2023/chrome-extension-fun/" rel="alternate" type="text/html" title="Chrome Extension fun" /><published>2023-05-16T00:00:00+00:00</published><updated>2023-05-16T00:00:00+00:00</updated><id>https://kroper.uk/blog/2023/chrome-extension-fun</id><content type="html" xml:base="https://kroper.uk/blog/2023/chrome-extension-fun/"><![CDATA[<p>I have recently started work on my <a href="https://github.com/KRoperUK/BulkSS">first Chrome Extension</a>.</p>]]></content><author><name></name></author><category term="general" /><category term="general" /><summary type="html"><![CDATA[Experimenting with Chrome Extensions.]]></summary></entry><entry><title type="html">Study spaces at UoB</title><link href="https://kroper.uk/blog/2023/study-spaces-at-uob/" rel="alternate" type="text/html" title="Study spaces at UoB" /><published>2023-04-04T00:00:00+00:00</published><updated>2023-04-04T00:00:00+00:00</updated><id>https://kroper.uk/blog/2023/study-spaces-at-uob</id><content type="html" xml:base="https://kroper.uk/blog/2023/study-spaces-at-uob/"><![CDATA[<h2 id="on-campus">On Campus</h2>
 
 <p>The University of Birmingham is home to many brilliant study spaces.</p>
 
