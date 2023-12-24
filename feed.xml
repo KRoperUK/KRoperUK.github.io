@@ -1,49 +1,134 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://kroper.uk/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kroper.uk/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-12-23T13:29:49+00:00</updated><id>https://kroper.uk/feed.xml</id><title type="html">blank</title><subtitle>2nd Year Computer Science student at the University of Birmingham
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://kroper.uk/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kroper.uk/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-12-24T00:52:41+00:00</updated><id>https://kroper.uk/feed.xml</id><title type="html">blank</title><subtitle>2nd Year Computer Science student at the University of Birmingham
 </subtitle><entry><title type="html">Sorting out your bills</title><link href="https://kroper.uk/blog/2023/bills/" rel="alternate" type="text/html" title="Sorting out your bills" /><published>2023-12-03T00:00:00+00:00</published><updated>2023-12-03T00:00:00+00:00</updated><id>https://kroper.uk/blog/2023/bills</id><content type="html" xml:base="https://kroper.uk/blog/2023/bills/"><![CDATA[<h2 id="what-bills">What bills?</h2>
 
 <p>Usually, you will need to pay the following bills</p>
 
 <ul>
-  <li>Electric and Gas (Energy)</li>
-  <li>Water</li>
+  <li><a href="#energy-bills">Electric and Gas (Energy)</a></li>
+  <li><a href="#water-bills">Water</a></li>
 </ul>
 
 <p>You may also want the following:</p>
 
 <ul>
-  <li>Broadband</li>
-  <li>TV Licence</li>
+  <li><a href="#broadband">Broadband</a></li>
+  <li><a href="#tv-license">TV License</a></li>
 </ul>
 
 <p>You will also need to check on:</p>
 
 <ul>
-  <li>Council Tax</li>
+  <li><a href="#council-tax">Council Tax</a></li>
 </ul>
 
-<p>Lets take these step by step…</p>
+<p>Lets take these on step by step…</p>
+
+<hr />
 
 <h3 id="energy-bills">Energy Bills</h3>
 
 <p>Most properties will use both electric and gas. Some properties may use electric only.</p>
 
-<p>Currently the UK government has put an energy price cap in place. This means suppliers are only allowed to charge upto the price cap on standard tarrifs.</p>
+<p>Currently the UK government has put an energy price cap in place. This means suppliers are only allowed to charge up to the price cap on standard tariffs.</p>
 
-<h4 id="fixed-vs-variable-energy-tarrifs">Fixed vs Variable Energy Tarrifs</h4>
+<h4 id="fixed-vs-variable-energy-tariffs">Fixed vs Variable Energy Tariffs</h4>
 
-<p>Fixed tarrifs allow you to lock into a supplier for a certain amount of time - usually 12 or 24 months. These fixed plans may benefit you with lower costs, however I recommend you go with a Variable tarriff.</p>
+<p>Fixed tariffs allow you to lock into a supplier for a certain amount of time - usually 12 or 24 months. These fixed plans may benefit you with lower costs, however I recommend you go with a Variable tariff.</p>
 
 <h4 id="who-should-i-use">Who should I use?</h4>
 
-<p>Honestly, it does not really matter. I recommend you go with Octopus Energy as you can receive £50 credit when using my referral code:</p>
+<p>Honestly, it does not really matter. However, I recommend you go with Octopus Energy as you can receive £50 credit when using my referral code: <a href="https://share.octopus.energy/lush-jade-935">https://share.octopus.energy/lush-jade-935</a></p>
+
+<hr />
 
 <h3 id="water-bills">Water Bills</h3>
 
 <p>Unlike energy bills, water suppliers are region specific. For example, in most of the West Midlands it will be Severn Trent providing your water, in the South East and London it will be Thames Water. This means you will have to go with that supplier for your water, sewerage, and surface run off. Yes that’s right, your bill to your water supplier is split into those three categories.</p>
 
+<blockquote>
+  <p>Use <a href="https://www.water.org.uk/customers/find-your-supplier">Water UK’s postcode checker</a> to find your local water supplier.</p>
+</blockquote>
+
+<p>I recommend you contact your water supplier as you move in to inform them of your tenancy period so you will not be asked to pay for any time the property was not under your occupancy. See your water suppliers website or contact them for further assistance.</p>
+
+<hr />
+
 <h3 id="broadband">Broadband</h3>
 
-<p>Be weary of locked contracts. Most standard broadband contracts are 18 months. Others are 12 months but providers may offset this by charging a higher monthly cost or higher set-up fees.</p>]]></content><author><name></name></author><category term="student-guides" /><category term="student" /><summary type="html"><![CDATA[“”]]></summary></entry><entry><title type="html">Chrome Extension fun</title><link href="https://kroper.uk/blog/2023/chrome-extension-fun/" rel="alternate" type="text/html" title="Chrome Extension fun" /><published>2023-05-16T00:00:00+00:00</published><updated>2023-05-16T00:00:00+00:00</updated><id>https://kroper.uk/blog/2023/chrome-extension-fun</id><content type="html" xml:base="https://kroper.uk/blog/2023/chrome-extension-fun/"><![CDATA[<p>I have recently started work on my <a href="https://github.com/KRoperUK/BulkSS">first Chrome Extension</a>.</p>]]></content><author><name></name></author><category term="general" /><category term="general" /><summary type="html"><![CDATA[Experimenting with Chrome Extensions.]]></summary></entry><entry><title type="html">Study spaces at UoB</title><link href="https://kroper.uk/blog/2023/study-spaces-at-uob/" rel="alternate" type="text/html" title="Study spaces at UoB" /><published>2023-04-04T00:00:00+00:00</published><updated>2023-04-04T00:00:00+00:00</updated><id>https://kroper.uk/blog/2023/study-spaces-at-uob</id><content type="html" xml:base="https://kroper.uk/blog/2023/study-spaces-at-uob/"><![CDATA[<h2 id="on-campus">On Campus</h2>
+<p>Be weary of locked contracts. Most standard broadband contracts are 18 months. Others are 12 months but providers may offset this by charging a higher monthly cost or higher set-up fees. Some providers also offer 30-day rolling contracts.</p>
+
+<h4 id="what-are-rolling-contracts">What are rolling contracts?</h4>
+
+<p>Instead of a contract lasting for 12, 18, or maybe even 24 months, a rolling contract will last for 28, 30, or whatever amount of days specified. This gives you extra flexibility as you only usually require 1 billing cycle (usually 30 days) notice to cancel with no exit fees.</p>
+
+<h4 id="caveats">Caveats</h4>
+
+<ul>
+  <li>Not all broadband suppliers will be able to offer you all services. Certain properties, roads, or even entire towns may not support, say, Virgin Media or fibre-to-home broadband. This means you may receive slower or no service with particular packages. You will be notified of what speeds and services are required when you give your postcode and house number during your application process.</li>
+  <li>Certain providers may require you to have a phone line rental. This can increase the price of your package, but may be unavailable.</li>
+</ul>
+
+<h4 id="finding-a-good-plan">Finding a good plan</h4>
+
+<h5 id="12-month-contracts">12 month contracts</h5>
+
+<p>Enter into a 12 month contract if you know for sure you will be using broadband for all 12 months of your tenancy, or if it works out cheaper than managing to get a shorter-term contract (say 9 months if you somehow manage) or a rolling/monthly contract.</p>
+
+<ul>
+  <li><a href="https://www.moneysavingexpert.com/compare-broadband-deals/12-month-broadband-deals/">MoneySavingExpert (TOP PICK)</a></li>
+</ul>
+
+<h5 id="rolling-contracts">Rolling contracts</h5>
+
+<p>The most common billing period for rolling contracts is 30 days. I used Virgin Media for my broadband in my second year. It was £39 per 30 days which wasn’t too bad split between 6 people for a very high and pretty reliable speed. Their student section is available <a href="https://www.virginmedia.com/broadband/student">here</a>, but won’t be available until the summer before the start of the academic year.</p>
+
+<ul>
+  <li><a href="https://www.moneysavingexpert.com/compare-broadband-deals/no-contract-broadband/">MoneySavingExpert (TOP PICK)</a></li>
+  <li><a href="https://www.uswitch.com/broadband/no-contract/">Uswitch</a>
+<!-- - [Compare the Market](https://www.comparethemarket.com/broadband/no-contract/) --></li>
+</ul>
+
+<hr />
+
+<h3 id="tv-license">TV License</h3>
+
+<p>You only require a TV License if you are planning on watching Live TV (e.g. Channel 4 Live, Freeview, Virgin, Sky) at the time of broadcast, or BBC iPlayer during live broadcasts and any on-demand programmes. This includes watching Netflix, YouTube clips, or any other on-demand TV outside of BBC iPlayer.</p>
+
+<p>There is also an exception in which you can legally watch live TV under your license at home (say your parents). If you hold a license at home, you can watch live TV and BBC iPlayer content on a device “powered entirely by its own means” - i.e. on battery. This includes smartphones and laptops, but does not technically allow they use when plugged in. Sounds silly, I know, but I believe it comes from the days of portable TVs.</p>
+
+<blockquote>
+  <p>In terms of obtaining a colour - or black and white TV license (yes, they still offer them!) - you can find out more information on the <a href="https://www.tvlicensing.co.uk">TV licensing website</a>.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="council-tax">Council Tax</h3>
+
+<p>Councils differ street to street and town to town. Use the <a href="https://www.gov.uk/find-local-council">Find your local council GOV.UK</a> tool to find out your council. <a href="https://www.gov.uk/council-tax/discounts-for-full-time-students">Students can receive an exemption from council tax</a>. You can learn more about applying <a href="https://www.gov.uk/apply-for-council-tax-discount">here</a>.</p>
+
+<p><strong>Almost all student houses are exempt from council tax.</strong> Usually, landlords will require proof of exemption in order to return a deposit. Contact your local council or your estate agent/landlord for more information on obtaining aan exemption certificate, or other proof of exemption.</p>
+
+<p><strong>You are only completely exempt from council tax when all residents are full-time students.</strong> If any residents are not full-time students, then your property will be liable for council tax. If only <strong>one</strong> person is not exempt (say they have graduated, are on a leave of absence, or are externally resiting), they may be able to apply for a single-person discount of 25%, meaning they only have to pay 75% of the council tax bill. Please contact your council for assistance with this.</p>
+
+<hr />
+
+<h2 id="funding-the-bills">Funding the bills</h2>
+
+<h3 id="strategy-1-splitting-app">Strategy 1: Splitting App</h3>
+
+<p>Use an app like <a href="https://www.tricount.com/en/">TriCount</a> or <a href="https://www.splitwise.com">Splitwise</a> to log all your expenses, who benefitted from them, and who paid for them. The app will then automatically calculate who owes whom, allowing you to balance up at any point. I recommend TriCount. It’s also free. It’s a great app and also allows you to have multiple accounts for the house, a holiday, a group of friends, an event - whatever you may want help splitting group expenses with.</p>
+
+<h3 id="strategy-2-central-account">Strategy 2: Central Account</h3>
+
+<p>You can also use a central account, say a Monzo account. Everyone puts in, say £200 at the start and then tops up £80 a month towards the bills and any group expenses (e.g. toilet paper, dish soap, dishwasher tablets, group meals). You use that one account to pay for everything shared between everyone. At the end of the year, use that money towards a big group meal or return it back to each person.</p>
+
+<h2 id="alternative-bill-splitting-services">Alternative: Bill Splitting Services</h2>
+
+<p>If all this still seems too much to you, or if you’re not too sure on trusting who you’re living with to chip into all the bills, I’d recommend <a href="https://www.the-bunch.co.uk">The Bunch</a>.</p>
+
+<p>There are others available, but this is all I can comment on them. I would not really recommend them as they cost a lot more, may result in poorer service as they may pair you up with poorer service providers, and just generally aren’t worth it compared to the 2-3 hours of effort it takes to set up bills yourself anyway.</p>
+
+<!-- ## Summary -->]]></content><author><name></name></author><category term="student-guides" /><category term="student" /><summary type="html"><![CDATA[A short guide on the basics of student bills.]]></summary></entry><entry><title type="html">Chrome Extension fun</title><link href="https://kroper.uk/blog/2023/chrome-extension-fun/" rel="alternate" type="text/html" title="Chrome Extension fun" /><published>2023-05-16T00:00:00+00:00</published><updated>2023-05-16T00:00:00+00:00</updated><id>https://kroper.uk/blog/2023/chrome-extension-fun</id><content type="html" xml:base="https://kroper.uk/blog/2023/chrome-extension-fun/"><![CDATA[<p>I have recently started work on my <a href="https://github.com/KRoperUK/BulkSS">first Chrome Extension</a>.</p>]]></content><author><name></name></author><category term="general" /><category term="general" /><summary type="html"><![CDATA[Experimenting with Chrome Extensions.]]></summary></entry><entry><title type="html">Study spaces at UoB</title><link href="https://kroper.uk/blog/2023/study-spaces-at-uob/" rel="alternate" type="text/html" title="Study spaces at UoB" /><published>2023-04-04T00:00:00+00:00</published><updated>2023-04-04T00:00:00+00:00</updated><id>https://kroper.uk/blog/2023/study-spaces-at-uob</id><content type="html" xml:base="https://kroper.uk/blog/2023/study-spaces-at-uob/"><![CDATA[<h2 id="on-campus">On Campus</h2>
 
 <p>The University of Birmingham is home to many brilliant study spaces.</p>
 
