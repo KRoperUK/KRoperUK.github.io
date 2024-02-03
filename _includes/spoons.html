@@ -28,31 +28,31 @@
   <p class="text-center mb-3"><span id="progressLeft"></span> / <span id="progressRight"></span></p>
 
 {% assign pubs = site.data.spoons_list_20230414 | sort: 'Locality' %}
-<div class="row row-cols-3 row-cols-md-3">
+<div class="row row-cols-3 row-cols-md-3 ">
         {% for pub in pubs %}
     
             {% if pub["Visited"] == "Y" %}
                 <div class="col p-1">
                     <a class="dumb-a" href="{{ pub['SourceURL'] }}">
-                    {% if pub["Closed"] == "Y"%}
-                        <div class="card h-100 flex bg-danger">
-                    {% else %}
-                        <div class="card h-100 flex">
-                    {% endif %}
-                    <!-- <div class="card-header">
-                        
-                    </div> -->
-                    <div class="card-body d-flex align-items-center">
                         {% if pub["Closed"] == "Y"%}
-                            <s><h3>{{ pub["pubName"] }}</h3></s>
+                        <div class="card h-100 flex bg-danger">
                         {% else %}
-                            <h3>{{ pub["pubName"] }}</h3>
+                        <div class="card h-100 flex">
                         {% endif %}
+                        <!-- <div class="card-header">
+                            
+                        </div> -->
+                            <div class="card-body d-flex">
+                                {% if pub["Closed"] == "Y"%}
+                                    <s><h3>{{ pub["pubName"] }}</h3></s>
+                                {% else %}
+                                    <h3>{{ pub["pubName"] }}</h3>
+                                {% endif %}
+                            </div>
+                            <div class="card-footer d-flex align-items-center">
+                                <small>{{ pub.Locality }}</small>
+                            </div>
                         </div>
-                        <div class="card-footer d-flex align-items-center">
-                            <small>{{ pub.Locality }}</small>
-                        </div>
-                    </div>
                     </a>
                 </div>
             {% endif %}
