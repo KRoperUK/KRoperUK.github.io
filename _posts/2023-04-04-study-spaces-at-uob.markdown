@@ -23,3 +23,9 @@ Outside of campus I love working in the following:
 
 - HeyBrew
 - Winterbourne
+
+## Finding study spaces
+
+I've made a website that has nearby study spaces with details of where they are and when they're open.
+
+[uobstudy.space](https://uobstudy.space)
