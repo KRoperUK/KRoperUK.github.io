@@ -27,11 +27,9 @@ jobs:
         bundler-cache: true
     - name: Install and Build 🔧
       run: |
-        npm install -g mermaid.cli
+        bundle install
         bundle exec jekyll build
     - name: Deploy 🚀
-      if: github.event_name != 'pull_request'
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: _site
-
+      run: |
+        tar czf site.tar.gz -C _site .
+        scp -o StrictHostKeyChecking=no -i ${{ secrets.SSH_KEY }} site.tar.gz ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PATH }}
