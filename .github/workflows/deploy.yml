@@ -32,4 +32,5 @@ jobs:
     - name: Deploy 🚀
       run: |
         tar czf site.tar.gz -C _site .
-        scp -o StrictHostKeyChecking=no -i ${{ secrets.SSH_KEY }} site.tar.gz ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PATH }}
+        scp -o StrictHostKeyChecking=no -i ${{ secrets.SSH_KEY }} site.tar.gz ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PATH }}/site.tar.gz
+        ssh -o StrictHostKeyChecking=no -i ${{ secrets.SSH_KEY }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "tar xzf ${{ secrets.SSH_PATH }}/site.tar.gz -C ${{ secrets.SSH_PATH }}/ && rm ${{ secrets.SSH_PATH }}/site.tar.gz"
