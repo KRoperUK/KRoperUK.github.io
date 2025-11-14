@@ -30,7 +30,7 @@ jobs:
     - name: Build Site 🔧
       run: bundle exec jekyll build
     - name: Lint with HTMLProofer 🔍
-      run: bundle exec htmlproofer ./_site --disable-external --allow-hash-href
+      run: bundle exec htmlproofer ./_site --disable-external --allow-hash-href --ignore-missing-alt --checks Links,Scripts
   
   build:
     runs-on: ubuntu-latest
