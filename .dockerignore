@@ -1,5 +1,4 @@
-# Ignore Jekyll build artifacts
-_site/
+# Ignore Jekyll cache
 .jekyll-cache/
 .sass-cache/
 
