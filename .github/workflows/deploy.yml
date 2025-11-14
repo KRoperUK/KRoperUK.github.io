@@ -63,15 +63,14 @@ jobs:
     steps:
     - name: Checkout 🛎️
       uses: actions/checkout@v3
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
+    - name: Download Build Artifact 📥
+      uses: actions/download-artifact@v4
       with:
-        ruby-version: '3.2.1'
-        bundler-cache: true
-    - name: Build Site 🔧
+        name: site-build
+    - name: Extract Site Archive 📦
       run: |
-        bundle install
-        bundle exec jekyll build
+        mkdir -p _site
+        tar xzf site.tar.gz -C _site
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
     - name: Login to GitHub Container Registry
@@ -86,7 +85,7 @@ jobs:
         context: .
         push: true
         tags: |
-          ghcr.io/${{ github.repository }}:latest
-          ghcr.io/${{ github.repository }}:${{ github.sha }}
+          ghcr.io/${{ github.repository_owner }}/kroperuk.github.io:latest
+          ghcr.io/${{ github.repository_owner }}/kroperuk.github.io:${{ github.sha }}
         cache-from: type=gha
         cache-to: type=gha,mode=max
