@@ -22,6 +22,7 @@ end
 group :other_plugins do
     gem 'feedjira'
     gem 'httparty'
+    gem 'html-proofer'
 end
 
 gem 'thor'

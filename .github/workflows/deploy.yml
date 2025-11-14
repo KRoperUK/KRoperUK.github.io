@@ -1,4 +1,4 @@
-name: deploy
+name: lint
 
 on:
   push:
@@ -12,10 +12,10 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  deploy:
+  lint:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout 🛎️
@@ -25,17 +25,68 @@ jobs:
       with:
         ruby-version: '3.2.1'
         bundler-cache: true
-    - name: Install and Build 🔧
+    - name: Install Dependencies 📦
+      run: bundle install
+    - name: Build Site 🔧
+      run: bundle exec jekyll build
+    - name: Lint with HTMLProofer 🔍
+      run: bundle exec htmlproofer ./_site --disable-external --allow-hash-href --assume-extension
+  
+  build:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+    - name: Checkout 🛎️
+      uses: actions/checkout@v3
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2.1'
+        bundler-cache: true
+    - name: Install Dependencies 📦
+      run: bundle install
+    - name: Build Site 🔧
+      run: bundle exec jekyll build
+    - name: Create Archive 📦
+      run: tar czf site.tar.gz -C _site .
+    - name: Upload Artifact 🚀
+      uses: actions/upload-artifact@v3
+      with:
+        name: site-build
+        path: site.tar.gz
+        retention-days: 30
+  
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
+    steps:
+    - name: Checkout 🛎️
+      uses: actions/checkout@v3
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2.1'
+        bundler-cache: true
+    - name: Build Site 🔧
       run: |
         bundle install
         bundle exec jekyll build
-    - name: Deploy 🚀
-      run: |
-        tar czf site.tar.gz -C _site .
-        echo "${{ secrets.SSH_KEY }}" | base64 -d > ssh_key && chmod 600 ssh_key
-        scp -o StrictHostKeyChecking=no -i ssh_key site.tar.gz ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/tmp/site.tar.gz
-        ssh -o StrictHostKeyChecking=no -i ssh_key ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "\
-          rm -rf ${{ secrets.SSH_PATH }}/* && \
-          mkdir -p ${{ secrets.SSH_PATH }} && \
-          tar xzf /tmp/site.tar.gz -C ${{ secrets.SSH_PATH }} && \
-          rm /tmp/site.tar.gz"
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v3
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    - name: Build and Push Docker Image 🐳
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        push: true
+        tags: |
+          ghcr.io/${{ github.repository }}:latest
+          ghcr.io/${{ github.repository }}:${{ github.sha }}
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
