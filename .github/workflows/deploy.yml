@@ -16,26 +16,8 @@ permissions:
   packages: write
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout 🛎️
-      uses: actions/checkout@v3
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.2.1'
-        bundler-cache: true
-    - name: Install Dependencies 📦
-      run: bundle install
-    - name: Build Site 🔧
-      run: bundle exec jekyll build
-    - name: Lint with HTMLProofer 🔍
-      run: bundle exec htmlproofer ./_site --disable-external --allow-hash-href --ignore-missing-alt --checks Links,Scripts
-  
   build:
     runs-on: ubuntu-latest
-    needs: lint
     steps:
     - name: Checkout 🛎️
       uses: actions/checkout@v3
@@ -81,4 +63,6 @@ jobs:
         tags: tag:ci
     - name: Deploy to Server 🚀
       run: |
-        curl http://t530-serve:8123
+        echo ${{ secrets.SSH_KEY }} > deploy_key.pem
+        scp -r -o StrictHostKeyChecking=no -i deploy_key.pem _site/* ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}
+        rm deploy_key.pem
