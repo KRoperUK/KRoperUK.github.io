@@ -13,7 +13,7 @@
       institution: University of Birmingham
       year: 2021-2025
       description:
-        - 2:1, 1st Year
+        - 1st Class
     - title: Ormiston SWB Academy
       year: 2014-2021
       description:
@@ -23,9 +23,20 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Technology Engineer Graduate
+      institution: Lloyds Banking Group
+      year: 2025-now
+      description:
+        - Graduate scheme role.
+        # - Description 1.
+        # - Description 2.
+        # - title: Description 3.
+        #   contents:
+        #     - Sub-description 1.
+        #     # - Sub-description 2.
     - title: Bar and Catering Assistant
       institution: Guild of Students
-      year: 2022 - now
+      year: 2022 - 2024
       # description:
         # - Description 1.
         # - Description 2.
