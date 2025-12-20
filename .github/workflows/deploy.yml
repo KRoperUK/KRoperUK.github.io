@@ -61,8 +61,14 @@ jobs:
         oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
         oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
         tags: tag:ci
+    - name: Install SSH Client 🔧
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y openssh-client
     - name: Deploy to Server 🚀
       run: |
-        echo ${{ secrets.SSH_KEY }} > deploy_key.pem
-        scp -r -o StrictHostKeyChecking=no -i deploy_key.pem _site/* ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}
-        rm deploy_key.pem
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_KEY }}" > ~/.ssh/deploy_key
+        chmod 600 ~/.ssh/deploy_key
+        scp -r -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i ~/.ssh/deploy_key _site/* ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}
+        rm ~/.ssh/deploy_key
