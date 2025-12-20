@@ -16,8 +16,9 @@ permissions:
   packages: write
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main' || github.event_name == 'pull_request'
     steps:
     - name: Checkout 🛎️
       uses: actions/checkout@v3
@@ -30,47 +31,18 @@ jobs:
       run: bundle install
     - name: Build Site 🔧
       run: bundle exec jekyll build
-    - name: Create Archive 📦
-      run: tar czf site.tar.gz -C _site .
-    - name: Upload Artifact 🚀
-      uses: actions/upload-artifact@v4
-      with:
-        name: site-build
-        path: site.tar.gz
-        retention-days: 30
-  
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
-    steps:
-    - name: Checkout 🛎️
-      uses: actions/checkout@v3
-    - name: Download Build Artifact 📥
-      uses: actions/download-artifact@v4
-      with:
-        name: site-build
-    - name: Extract Site Archive 📦
-      run: |
-        mkdir -p _site
-        tar xzf site.tar.gz -C _site
-        ls -la _site
     - name: Tailscale
+      if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
       uses: tailscale/github-action@v4
       with:
         oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
         oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
         tags: tag:ci
-    - name: Install SSH Client 🔧
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y openssh-client
     - name: Deploy to Server 🚀
+      if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
       run: |
         mkdir -p ~/.ssh
         echo "${{ secrets.SSH_KEY }}" > ~/.ssh/deploy_key
         chmod 600 ~/.ssh/deploy_key
-        ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i ~/.ssh/deploy_key ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "rm -rf ${{ secrets.SSH_PATH }}/* ${{ secrets.SSH_PATH }}/.[!.]* 2>/dev/null || true"
-        scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i ~/.ssh/deploy_key site.tar.gz ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/tmp/site.tar.gz
-        ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i ~/.ssh/deploy_key ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "tar xzf /tmp/site.tar.gz -C ${{ secrets.SSH_PATH }} && rm /tmp/site.tar.gz"
+        rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i ~/.ssh/deploy_key" _site/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PATH }}/
         rm ~/.ssh/deploy_key
