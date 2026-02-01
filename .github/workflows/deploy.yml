@@ -1,4 +1,4 @@
-name: lint
+name: Build and Deploy Jekyll
 
 on:
   push:
@@ -13,7 +13,8 @@ on:
 
 permissions:
   contents: read
-  packages: write
+  pages: write
+  id-token: write
 
 jobs:
   build-and-deploy:
@@ -31,24 +32,12 @@ jobs:
       run: bundle install
     - name: Build Site 🔧
       run: bundle exec jekyll build
-    - name: Tailscale
+    - name: Upload Pages Artifact
       if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
-      uses: tailscale/github-action@v4
+      uses: actions/upload-pages-artifact@v2
       with:
-        oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
-        oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
-        tags: tag:ci
-    - name: Install rsync (runner)
+        path: _site
+    - name: Deploy to GitHub Pages 🚀
       if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y rsync
-    - name: Deploy to Server 🚀
-      if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
-      run: |
-        mkdir -p ~/.ssh
-        echo "${{ secrets.SSH_KEY }}" > ~/.ssh/deploy_key
-        chmod 600 ~/.ssh/deploy_key
-        ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i ~/.ssh/deploy_key ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "command -v rsync >/dev/null 2>&1 || (sudo apt-get update && sudo apt-get install -y rsync)"
-        rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i ~/.ssh/deploy_key" _site/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PATH }}/
-        rm ~/.ssh/deploy_key
+      id: deployment
+      uses: actions/deploy-pages@v2
