@@ -10,12 +10,12 @@ layout: default
             {% if page.img and page.preview_image != false %}
             {% include figure.html path=page.img alt=page.title width="50%" %}
             {% endif %}
-  
+
             {% if page.repo %}
             {% include repository/repo.html repository=page.repo %}
             <br>
             {% endif %}
-  
+
             {{ content }}
           </header>
 

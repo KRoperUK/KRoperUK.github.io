@@ -10,7 +10,7 @@ nav: false
 
 <input class="button-2 w-100 border" style="height:5em" id="button-shoutout" type="button" value="Begin Shoutout" onclick="handleButton();" />
 
-<script>    
+<script>
 var i = 0;
 var txt = `These past three weeks have been a brilliant time of learning, getting a great insight into teaching and finding out about education behind the scenes. Thanks to your mentorship I have learned so much and have enjoyed it thoroughly. You might have only been here since January but you and the rest of your department and the wider Enterprise (the organisational structure of GSA is still a little hazy sometimes) have been so welcoming and a group of people I wish to cross paths with and contact in my future.
 
@@ -33,7 +33,7 @@ function handleButton() {
 }
 
 function typeWriter() {
-    
+
   if (i < txt.length) {
     if (txt.charAt(i) == "§"){
         document.getElementById("shoutout-content").innerHTML += "<br /><br />";

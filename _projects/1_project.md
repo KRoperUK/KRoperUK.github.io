@@ -11,4 +11,3 @@ location:
   title: custom market title
 repo: KRoperUK/voting-app
 ---
-

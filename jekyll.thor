@@ -34,7 +34,7 @@ class Jekyll < Thor
     def news(*title)
       title = title.join(" ")
       date = Time.now.strftime('%Y-%m-%d')
-      
+
       number = 1
 
       filename = "_news/announcement_#{number}.markdown"
@@ -43,7 +43,7 @@ class Jekyll < Thor
         number += 1
         filename = "_news/announcement_#{number}.markdown"
       end
-  
+
       puts "Creating new news post: #{filename}"
       open(filename, 'w') do |post|
         post.puts "---"
@@ -59,7 +59,7 @@ class Jekyll < Thor
         post.puts "#{title.gsub(/&/,'&amp;')}"
         post.puts "<!-- Generated announcement -->"
       end
-  
+
       system(options[:editor], filename)
     end
   end

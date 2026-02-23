@@ -9,4 +9,3 @@ categories: general
 ---
 
 I have recently started work on my [first Chrome Extension](https://github.com/KRoperUK/BulkSS).
-    

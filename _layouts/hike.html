@@ -9,25 +9,25 @@ layout: default
         <div class="post">
           <header class="post-header">
             <div class="card">
-              
+
               <div class="card-header">
                 <h1 class="post-title">{{ page.title }}</h1>
               </div>
-              
+
               <div class="card-body">
                 <p class="post-description">{{ page.description }}</p>
               </div>
-              
+
               {% if page.mapping %}
               <div id="map" style="height: 24em;"></div>
               {% endif %}
             </div>
           </header>
-          
+
           <article>
             {{ content }}
           </article>
-          
+
           <br />
 
           <center>

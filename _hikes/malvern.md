@@ -2,7 +2,7 @@
 layout: hike
 title: Malvern Hills
 description: Worcestershire's finest
-img: 
+img:
 importance: 1
 category: trip
 mapping:

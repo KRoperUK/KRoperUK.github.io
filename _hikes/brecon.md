@@ -2,7 +2,7 @@
 layout: hike
 title: Brecon Beacons
 description: A beautiful range in South Wales
-img: 
+img:
 importance: 1
 category: trip
 mapping:

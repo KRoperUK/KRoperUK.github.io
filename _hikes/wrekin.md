@@ -2,7 +2,7 @@
 layout: hike
 title: The Wrekin
 description: Another hike in Shropshire.
-img: 
+img:
 importance: 1
 category: trip
 mapping:
