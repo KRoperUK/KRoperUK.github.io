@@ -30,7 +30,7 @@
 {% assign pubs = site.data.spoons_list_20230414 | sort: 'Locality' %}
 <div class="row row-cols-3 row-cols-md-3 ">
         {% for pub in pubs %}
-    
+
             {% if pub["Visited"] == "Y" %}
                 <div class="col p-1">
                     <a class="dumb-a" href="{{ pub['SourceURL'] }}">
@@ -40,7 +40,7 @@
                         <div class="card h-100 flex">
                         {% endif %}
                         <!-- <div class="card-header">
-                            
+
                         </div> -->
                             <div class="card-body d-flex">
                                 {% if pub["Closed"] == "Y"%}
@@ -166,7 +166,7 @@ onAdd: function(map) {
     visitedD.appendChild(visitedA);
     visitedD.appendChild(layerA);
     visitedD.appendChild(groupA);
-    
+
     return visitedD;
 },
 
@@ -203,7 +203,7 @@ for (i in pubPoints) {
         visitedMarkers.addLayer(marker);
         visitedMarkersUngroup.addLayer(marker);
         count += 1;
-        
+
     } else {
         var marker = L.marker([pub.Latitude,pub.Longitude,], {icon: (pub.Closed == "Y") ? closedSpoonsIcon : greySpoonsIcon})
         marker.bindPopup(`<center><a href="${pub.SourceURL}"><b>${pub.pubName}</b></a><br>${pub.Locality}</center><center><small><i>Unvisited</i></small><br><a href="${direction_URL}">Directions</a></center>`);

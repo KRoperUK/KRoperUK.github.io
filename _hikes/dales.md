@@ -2,7 +2,7 @@
 layout: hike
 title: Yorkshire Dales
 description: Even better than Yorkshire Tea
-img: 
+img:
 importance: 1
 category: trip
 mapping:
