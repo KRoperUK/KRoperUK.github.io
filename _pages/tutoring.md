@@ -3,7 +3,10 @@ layout: page
 permalink: /tutoring/
 title: tutoring
 description: ""
-nav: true
+nav: false
+# Page disabled — kept in the repo so the content is recoverable, but
+# excluded from the build so /tutoring/ no longer resolves.
+published: false
 ---
 
 ## Tutoring Available for Computer Science
