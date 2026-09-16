@@ -33,12 +33,14 @@ highlight_theme_light: github   # https://github.com/jwarby/jekyll-pygments-them
 highlight_theme_dark: native    # https://github.com/jwarby/jekyll-pygments-themes
 
 # repo color theme
-repo_theme_light: default       # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
-repo_theme_dark: dark           # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+repo_theme_light: default       # https://github.com/vn7n24fzkq/github-profile-summary-cards
+repo_theme_dark: github_dark    # https://github.com/vn7n24fzkq/github-profile-summary-cards
 repo_trophies:
-  enabled: true
-  theme_light: flat    # https://github.com/ryo-ma/github-profile-trophy
-  theme_dark: gitdimmed  # https://github.com/ryo-ma/github-profile-trophy
+  # github-profile-trophy now returns HTTP 402 (the free tier is gone), which
+  # left broken images on /repositories/. Disabled rather than replaced.
+  enabled: false
+  theme_light: flat
+  theme_dark: gitdimmed
 
 # -----------------------------------------------------------------------------
 # RSS Feed
